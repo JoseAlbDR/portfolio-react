@@ -15,6 +15,7 @@
   // width: 100dvw;
   column-gap: 10px;
   height: 100dvh;
+  // background-image: url('../../assets/images/nobgbanner.png');
 }
 
 .page {
@@ -35,7 +36,7 @@
     margin-bottom: 15px;
   }
   .bottom-tag-html {
-    margin-left: -20px;
+    margin-left: -5%;
   }
 }
 
@@ -57,4 +58,16 @@
   .app {
     column-gap: 50px;
   }
+}
+
+.bg-fixed {
+  background-image: linear-gradient(
+      rgba(36, 42, 46, 0.6),
+      rgba(36, 42, 46, 0.6)
+    ),
+    url('../../assets/images/nobgbanner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
