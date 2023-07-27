@@ -16,9 +16,13 @@ function Home() {
     <div className="container home-page">
       <div className="text-zone">
         <h1>
-          <span>Hi,</span>
           <span>
-            I&apos;m
+            <span className={letterClass}>H</span>
+            <span className={`${letterClass} _12`}>i,</span>
+          </span>
+          <span>
+            <span className={`${letterClass} _13`}>I</span>
+            <span className={`${letterClass} _14`}>&apos;m</span>
             <img src={LogoTitle} alt="developer" />
             <AnimatedLetters
               letterClass={letterClass}
