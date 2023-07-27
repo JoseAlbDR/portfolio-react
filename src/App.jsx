@@ -1,7 +1,7 @@
 import './App.scss'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
-import HomePage from './components/HomePage/HomePage'
+import HomePage from './components/Home/Home'
 
 function App() {
   return (
