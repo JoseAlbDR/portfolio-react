@@ -1,15 +1,19 @@
 import './App.scss'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
-import HomePage from './components/Home/Home'
+import Home from './components/Home/Home'
+import About from './components/About/About'
+import Contact from './components/Contact/Contact'
 
 function App() {
   return (
     <>
       <Routes>
-        <Route element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Navigate replace to="homepage" />} />
-          <Route path="homepage" element={<HomePage />} />
+          <Route path="homepage" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </>
