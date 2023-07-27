@@ -50,7 +50,7 @@
       }
 
       &:hover {
-        color: #1c7ed6;
+        color: var(--primary-color);
 
         svg {
           opacity: 0;
@@ -95,7 +95,7 @@
 
     a.active {
       svg {
-        color: #1c7ed6;
+        color: var(--primary-color);
       }
     }
   }
@@ -118,7 +118,7 @@
         line-height: 16px;
 
         &:hover svg {
-          color: #1c7ed6;
+          color: var(--primary-color);
         }
       }
     }
