@@ -8,7 +8,7 @@
   }
   h1 {
     color: #fff;
-    font-size: 56px;
+    font-size: 30px;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -73,6 +73,14 @@
     &:hover {
       background-color: #fff;
       color: #022c43;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .home-page {
+    h1 {
+      font-size: 56px;
     }
   }
 }
