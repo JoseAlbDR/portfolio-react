@@ -22,7 +22,7 @@ function Sidebar() {
         <img className="sub-logo" src={LogoSubtitle} alt="jadero" />
       </Link>
       <nav>
-        <NavLink exact="true" to="/">
+        <NavLink exact="true" to="/home">
           <FontAwesomeIcon icon={faHome} color="#fff" />
         </NavLink>
         <NavLink exact="true" to="/about" className="about-link">
