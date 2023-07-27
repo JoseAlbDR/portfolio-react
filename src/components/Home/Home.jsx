@@ -1,6 +1,6 @@
 import './Home.scss'
 
-function HomePage() {
+function Home() {
   return (
     <div>
       <h1>HOME</h1>
@@ -8,4 +8,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default Home
