@@ -1,6 +1,11 @@
+import Sidebar from '../Sidebar/Sidebar'
 import './Layout.scss'
 function Layout() {
-  return <>Hello</>
+  return (
+    <>
+      <Sidebar />
+    </>
+  )
 }
 
 export default Layout
