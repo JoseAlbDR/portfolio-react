@@ -30,13 +30,22 @@
     flex-grow: auto;
   }
 
-  .top-tags {
-  }
-
-  .bottom-tags {
-  }
-
   .bottom-tag-html {
     margin-left: -20px;
   }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  will-change: contents;
+  height: 90%;
+  min-height: 566px;
+  opacity: 0;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
 }
