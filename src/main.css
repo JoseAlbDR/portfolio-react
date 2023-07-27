@@ -15,6 +15,6 @@ body {
   font-weight: 300;
   color: #fff;
   background: #022c43;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: block;
 }
