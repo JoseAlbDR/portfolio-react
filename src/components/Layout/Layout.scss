@@ -12,14 +12,16 @@
 .app {
   display: grid;
   grid-template-columns: auto 1fr;
-  width: 100dvw;
+  // width: 100dvw;
   column-gap: 10px;
+  height: 100dvh;
 }
 
 .page {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   margin: 35px 0;
 
   .tags {
@@ -27,9 +29,11 @@
     opacity: 0.6;
     font-size: 18px;
     font-family: 'Roboto Mono', monospace;
-    flex-grow: auto;
   }
 
+  .top-tags {
+    margin-bottom: 15px;
+  }
   .bottom-tag-html {
     margin-left: -20px;
   }
@@ -39,10 +43,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   will-change: contents;
-  height: 90%;
-  min-height: 566px;
+  // height: 90%;
+  // min-height: 566px;
   opacity: 0;
   z-index: 1;
   transform-style: preserve-3d;
