@@ -1,5 +1,5 @@
 import './Logo.scss'
-import LogoS from '../../assets/images/J.svg'
+import LogoS from '../assets/images/J.svg'
 function Logo() {
   return (
     <div className="logo-container">
