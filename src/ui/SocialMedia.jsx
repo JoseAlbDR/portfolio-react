@@ -4,7 +4,6 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SocialMediaItem from './SocialMediaItem'
 
 function SocialMedia() {
