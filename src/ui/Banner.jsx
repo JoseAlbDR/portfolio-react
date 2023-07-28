@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import AnimatedLetters from '../animations/AnimatedLetters'
 import LogoTitle from '../assets/images/logo.png'
+import LinkButton from './LinkButton'
 
 function Banner() {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -45,9 +45,9 @@ function Banner() {
         />
       </h1>
       <h2>Frontent Developer / Backend Developer</h2>
-      <Link to="/contact" className="flat-button">
+      <LinkButton to="/contact" className="flat-button">
         CONTACT ME
-      </Link>
+      </LinkButton>
     </div>
   )
 }
