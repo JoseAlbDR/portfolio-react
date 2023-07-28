@@ -14,9 +14,7 @@ body {
   font-weight: 300;
   color: #fff;
   background: #022c43;
-  overflow: hidden;
-  display: block;
-  height: 100dvh;
+  height: 100vh;
 }
 
 .flat-button {
@@ -40,11 +38,6 @@ body {
   }
 }
 
-.overflow-scroll {
-  overflow: scroll;
-  height: 100%;
-}
-
 .container {
   width: 100%;
   will-change: contents;
@@ -53,15 +46,12 @@ body {
   transform-style: preserve-3d;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
-  position: relative;
-  // height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text-zone {
-  // position: absolute;
-  // top: 50%;
-  // transform: translateY(-50%);
-  // width: 45%;
   max-height: 90%;
   margin-left: 8%;
 }
@@ -92,10 +82,30 @@ h1 {
     font-weight: 300;
     font-size: 18px;
     opacity: 0.6;
-    // position: absolute;
-    // margin-top: 18px;
     margin-left: -20px;
   }
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.bg {
+  background-image: linear-gradient(
+      rgba(36, 42, 46, 0.8),
+      rgba(36, 42, 46, 0.8)
+    ),
+    url('../assets/images/nobgbanner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {

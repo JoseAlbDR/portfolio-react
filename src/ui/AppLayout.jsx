@@ -4,17 +4,27 @@ import TopTags from './TopTags'
 import BottomTags from './BottomTags'
 import App from './App'
 import Main from './Main'
+import FlexRow from './FlexRow'
 
 function AppLayout() {
   return (
-    <App>
-      <Sidebar />
-      <Main>
-        <TopTags />
-        <Outlet />
-        <BottomTags />
-      </Main>
-    </App>
+    <>
+      <div className="bg"></div>
+      <div className="content">
+        <App>
+          <Sidebar />
+          <div className="of-sc">
+            <Main>
+              <FlexRow>
+                <TopTags />
+                <Outlet />
+                <BottomTags />
+              </FlexRow>
+            </Main>
+          </div>
+        </App>
+      </div>
+    </>
   )
 }
 
