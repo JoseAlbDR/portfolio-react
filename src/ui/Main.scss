@@ -3,8 +3,10 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  margin-left: 2%;
-  overflow: scroll;
+  padding-left: 2%;
+  // height: 100%;
+  // overflow: scroll;
+  position: relative;
 
   .tags {
     color: #fff;

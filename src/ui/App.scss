@@ -1,7 +1,6 @@
 .app {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 2%;
   height: 100dvh;
 }
 
@@ -11,6 +10,11 @@
       rgba(36, 42, 46, 0.8)
     ),
     url('../assets/images/nobgbanner.png');
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

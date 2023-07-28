@@ -1,7 +1,7 @@
 import './App.scss'
 
 function App({ children }) {
-  return <div className="app bg-fixed">{children}</div>
+  return <div className="app">{children}</div>
 }
 
 export default App
