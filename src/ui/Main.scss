@@ -1,0 +1,22 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin: 35px 0;
+
+  .tags {
+    color: #fff;
+    opacity: 0.6;
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 3%;
+  }
+
+  .top-tags {
+    margin-bottom: 15px;
+  }
+  .bottom-tag-html {
+    margin-left: -1%;
+  }
+}

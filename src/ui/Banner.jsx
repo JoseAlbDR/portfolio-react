@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import AnimatedLetters from '../animations/AnimatedLetters'
 import LogoTitle from '../assets/images/logo.png'
 import LinkButton from './LinkButton'
+import './Banner.scss'
 
 function Banner() {
   const [letterClass, setLetterClass] = useState('text-animate')
