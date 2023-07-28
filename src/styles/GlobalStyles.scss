@@ -4,6 +4,7 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
   background: #022c43;
   /* overflow: hidden; */
   display: block;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .flat-button {
