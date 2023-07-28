@@ -1,47 +1,47 @@
-import { useEffect, useState } from 'react'
 import AnimatedLetters from '../animations/AnimatedLetters'
 import LogoTitle from '../assets/images/logo.png'
 import LinkButton from './LinkButton'
-import './Banner.scss'
+import '../animations/AnimatedLetters.scss'
+import { useAnimation } from '../hooks/useAnimation'
 
 function Banner() {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = ['.', 'A', 'l', 'b', 'e', 'r', 't', 'o']
-  // prettier-ignore
-  const jobArrayFirst = ["F", "u", "l", "l"," ","S","t","a","c","k"]
-  // prettier-ignore
-  const jobArrayLast = ["W","e","b"," ","D","e","v","e","l","o","p","e","r"]
+  const { letterClass } = useAnimation(4)
+  const name = '.Alberto'.split('')
+  const jobLineOne = 'Full Stack'.split('')
+  const jobLineTwo = 'Web Developer'.split('')
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 4000)
-  }, [])
   return (
     <div className="text-zone">
       <h1>
         <span>
-          <span className={letterClass}>H</span>
-          <span className={`${letterClass} _12`}>i,</span>
-        </span>
-        <span>
-          <span className={`${letterClass} _13`}>I</span>
-          <span className={`${letterClass} _14`}>&apos;m</span>
-          <img src={LogoTitle} alt="developer" />
           <AnimatedLetters
             letterClass={letterClass}
-            strArray={nameArray}
-            idx={15}
+            strArray={['H', 'i,']}
+            idx={12}
           />
+        </span>
+        <span>
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={['I']}
+            idx={13}
+          />
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={[`'m`]}
+            idx={14}
+          />
+          <img src={LogoTitle} alt="developer" />
+          <AnimatedLetters letterClass={letterClass} strArray={name} idx={15} />
         </span>
         <AnimatedLetters
           letterClass={letterClass}
-          strArray={jobArrayFirst}
+          strArray={jobLineOne}
           idx={15}
         />
         <AnimatedLetters
           letterClass={letterClass}
-          strArray={jobArrayLast}
+          strArray={jobLineTwo}
           idx={15}
         />
       </h1>
