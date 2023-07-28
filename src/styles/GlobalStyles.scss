@@ -16,7 +16,7 @@ body {
   background: #022c43;
   /* overflow: hidden; */
   display: block;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .flat-button {
@@ -38,4 +38,9 @@ body {
     background-color: #fff;
     color: #022c43;
   }
+}
+
+.overflow-scroll {
+  overflow: scroll;
+  height: 100%;
 }

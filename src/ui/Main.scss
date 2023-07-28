@@ -3,7 +3,9 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  margin: 35px 0;
+  // overflow: scroll;
+  // overflow-x: hidden;
+  margin-left: 2%;
 
   .tags {
     color: #fff;
