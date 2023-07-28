@@ -1,16 +1,16 @@
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../Sidebar/Sidebar'
 import './Layout.scss'
+import TopTags from './TopTags'
+import BottomTags from './BottomTags'
 function Layout() {
   return (
     <div className="app bg-fixed">
       <Sidebar />
       <main className="page">
-        <span className="tags bottom-tag-html">&lt;html&gt;</span>
-        <span className="tags top-tags">&lt;body&gt;</span>
+        <TopTags />
         <Outlet />
-        <span className="tags bottom-tags">&lt;/body&gt;</span>
-        <span className="tags bottom-tag-html">&lt;/html&gt;</span>
+        <BottomTags />
       </main>
     </div>
   )
