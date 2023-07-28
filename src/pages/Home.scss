@@ -1,36 +1,6 @@
 .home-page {
   position: relative;
   h1 {
-    color: #fff;
-    font-size: 30px;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-
-    &::before {
-      content: '<h1>';
-      font-family: 'Roboto Mono', monospace;
-      font-weight: 300;
-      font-size: 18px;
-      opacity: 0.6;
-      position: absolute;
-      margin-top: -20px;
-      margin-left: -20px;
-    }
-
-    &::after {
-      content: '</h1>';
-      font-family: 'Roboto Mono', monospace;
-      font-weight: 300;
-      font-size: 18px;
-      opacity: 0.6;
-      // position: absolute;
-      // margin-top: 18px;
-      margin-left: -20px;
-    }
-
     img {
       width: 38px;
       margin-left: 15px;
@@ -40,6 +10,7 @@
       animation-delay: 1.4s;
     }
   }
+
   h2 {
     color: #8d8d8d;
     margin-top: 20px;
@@ -49,13 +20,3 @@
     animation: fadeIn 1s 1.8s backwards;
   }
 }
-
-@media (min-width: 768px) {
-  .home-page {
-    h1 {
-      font-size: 56px;
-    }
-  }
-}
-
-
