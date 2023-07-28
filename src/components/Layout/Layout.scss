@@ -12,10 +12,8 @@
 .app {
   display: grid;
   grid-template-columns: auto 1fr;
-  // width: 100dvw;
   column-gap: 10px;
   height: 100dvh;
-  // background-image: url('../../assets/images/nobgbanner.png');
 }
 
 .page {
@@ -30,13 +28,14 @@
     opacity: 0.6;
     font-size: 18px;
     font-family: 'Roboto Mono', monospace;
+    margin-left: 3%;
   }
 
   .top-tags {
     margin-bottom: 15px;
   }
   .bottom-tag-html {
-    margin-left: -5%;
+    margin-left: -1%;
   }
 }
 
@@ -62,8 +61,8 @@
 
 .bg-fixed {
   background-image: linear-gradient(
-      rgba(36, 42, 46, 0.6),
-      rgba(36, 42, 46, 0.6)
+      rgba(36, 42, 46, 0.8),
+      rgba(36, 42, 46, 0.8)
     ),
     url('../../assets/images/nobgbanner.png');
   background-size: cover;
