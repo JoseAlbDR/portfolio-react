@@ -9,13 +9,6 @@
 //   top: 35px;
 // }
 
-.app {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 10px;
-  height: 100dvh;
-}
-
 .page {
   display: flex;
   flex-direction: column;
@@ -57,16 +50,4 @@
   .app {
     column-gap: 50px;
   }
-}
-
-.bg-fixed {
-  background-image: linear-gradient(
-      rgba(36, 42, 46, 0.8),
-      rgba(36, 42, 46, 0.8)
-    ),
-    url('../assets/images/nobgbanner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
 }
