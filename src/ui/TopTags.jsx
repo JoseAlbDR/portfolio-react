@@ -1,5 +1,3 @@
-import './Layout.scss'
-
 function TopTags() {
   return (
     <>

@@ -1,19 +1,21 @@
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
-import './Layout.scss'
+import './AppLayout.scss'
 import TopTags from './TopTags'
 import BottomTags from './BottomTags'
-function Layout() {
+import App from './App'
+import Main from './Main'
+function AppLayout() {
   return (
-    <div className="app bg-fixed">
+    <App>
       <Sidebar />
-      <main className="page">
+      <Main>
         <TopTags />
         <Outlet />
         <BottomTags />
-      </main>
-    </div>
+      </Main>
+    </App>
   )
 }
 
-export default Layout
+export default AppLayout
