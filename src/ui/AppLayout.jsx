@@ -5,6 +5,7 @@ import BottomTags from './BottomTags'
 import App from './App'
 import Main from './Main'
 import FlexRow from './FlexRow'
+import './AppLayout.scss'
 
 function AppLayout() {
   return (

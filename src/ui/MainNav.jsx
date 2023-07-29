@@ -1,5 +1,6 @@
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import MainNavItem from './MainNavItem'
+import './MainNav.scss'
 
 function MainNav() {
   return (

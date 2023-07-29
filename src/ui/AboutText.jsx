@@ -1,6 +1,6 @@
 function AboutText() {
   return (
-    <div className="about-text">
+    <div>
       <p>
         Hello, I&apos;m J. Alberto Delgado, a beginner web development student.
         My passion is solving problems through programming.

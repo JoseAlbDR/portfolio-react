@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import LogoJ from '../assets/images/logo.png'
 import LogoSubtitle from '../assets/images/logo_sub.png'
-
+import './SideLogo.scss'
 function SideLogo() {
   return (
     <Link className="logo" to="/">
