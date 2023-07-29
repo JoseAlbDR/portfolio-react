@@ -9,6 +9,8 @@ function ContactForm() {
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
+  const form = useRef()
+  const captchaRef = useRef(null)
 
   function reset() {
     setName('')
@@ -17,12 +19,23 @@ function ContactForm() {
     setMessage('')
   }
 
-  function handleSubmit(e, form) {
+  async function handleSubmit(e, form) {
+    let token = captchaRef.current.getValue()
+    console.log(token)
+
+    // if (token) {
+    //   let validToken = await verifyToken(token)
+    //   if (validToken.success) {
+    //     sendEmail(e, form)
+    //     reset()
+    //   } else {
+    //     throw new Error('Invalid token')
+    //   }
+    // }
+
     sendEmail(e, form)
     reset()
   }
-
-  const form = useRef()
 
   return (
     <form
@@ -36,6 +49,7 @@ function ContactForm() {
         type="text"
         name="user_name"
         placeholder="Name"
+        value={name}
         onChange={(e) => setName(e.target.value)}
         required
       />
@@ -44,6 +58,7 @@ function ContactForm() {
         type="email"
         name="user_email"
         placeholder="Email"
+        value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
@@ -52,6 +67,7 @@ function ContactForm() {
         type="text"
         name="subject"
         placeholder="Subject"
+        value={subject}
         onChange={(e) => setSubject(e.target.value)}
         required
       />
@@ -62,10 +78,14 @@ function ContactForm() {
         placeholder="Message"
         cols="30"
         rows="10"
+        value={message}
         onChange={(e) => setMessage(e.target.value)}
         required
       ></textarea>
-      <ReCAPTCHA sitekey="6LdJXGYnAAAAAGhjLq6wplTaDc4Um_1NeBioHAA5" />
+      <ReCAPTCHA
+        sitekey="6LdJXGYnAAAAAGhjLq6wplTaDc4Um_1NeBioHAA5"
+        ref={captchaRef}
+      />
 
       <LinkButton className="send-button">SEND</LinkButton>
     </form>
