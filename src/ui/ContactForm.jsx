@@ -39,7 +39,7 @@ function ContactForm() {
         cols="30"
         rows="10"
       ></textarea>
-      <ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_KEY} />
+      <ReCAPTCHA sitekey="6LdJXGYnAAAAAGhjLq6wplTaDc4Um_1NeBioHAA5" />
 
       <LinkButton className="send-button">SEND</LinkButton>
     </form>
