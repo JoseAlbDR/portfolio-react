@@ -1,6 +1,4 @@
-import AnimatedLetters from '../animations/AnimatedLetters'
 import './About.scss'
-import { useAnimation } from '../hooks/useAnimation'
 import {
   faAngular,
   faCss3,
@@ -15,8 +13,6 @@ import LoadingAnimation from '../animations/LoadingAnimation'
 import SectionTitle from '../ui/SectionTitle'
 
 function About() {
-  const { letterClass } = useAnimation(3)
-
   const faces = [
     { className: 'face1', icon: faReact, color: '#5ED4F4' },
     { className: 'face2', icon: faJsSquare, color: '#EFD81D' },
