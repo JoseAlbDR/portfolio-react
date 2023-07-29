@@ -22,7 +22,7 @@
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1400px) {
   div.contact-page {
     flex-direction: row;
     align-items: center;
@@ -37,6 +37,7 @@
         align-items: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         justify-items: center;
         align-items: center;
       }
