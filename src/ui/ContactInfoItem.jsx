@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LinkButton from './LinkButton'
 
 function ContactInfoItem({ icon, url, title, color }) {
-  console.log(color)
   return (
     <li>
       <LinkButton to={url} className="info-item">

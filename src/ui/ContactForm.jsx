@@ -1,28 +1,28 @@
 import { useRef } from 'react'
 import './ContactForm.scss'
 import LinkButton from './LinkButton'
-import emailjs from '@emailjs/browser'
+import { sendEmail } from '../services/sendEmail'
+import ReCAPTCHA from 'react-google-recaptcha'
 function ContactForm() {
   const form = useRef()
 
-  const sendEmail = (e) => {
-    e.preventDefault()
-
-    emailjs.sendForm()
-  }
-
   return (
-    <form method="POST" className="contact-form">
+    <form
+      ref={form}
+      onSubmit={(e) => sendEmail(e, form)}
+      className="contact-form"
+      method="POST"
+    >
       <input
         className="contact-name"
         type="text"
-        name="name"
+        name="user_name"
         placeholder="Name"
       />
       <input
         className="contact-mail"
         type="mail"
-        name="email"
+        name="user_email"
         placeholder="Email"
       />
       <input
@@ -39,6 +39,8 @@ function ContactForm() {
         cols="30"
         rows="10"
       ></textarea>
+      <ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_KEY} />
+
       <LinkButton className="send-button">SEND</LinkButton>
     </form>
   )
