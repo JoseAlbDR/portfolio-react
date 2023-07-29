@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import TopTags from './TopTags'
 import BottomTags from './BottomTags'
-import App from './App'
+import MainContainer from './MainContainer'
 import Main from './Main'
 import FlexRow from './FlexRow'
 import './AppLayout.scss'
@@ -12,7 +12,7 @@ function AppLayout() {
     <>
       <div className="bg"></div>
       <div className="content">
-        <App>
+        <MainContainer>
           <Sidebar />
           <div className="of-sc">
             <Main>
@@ -23,7 +23,7 @@ function AppLayout() {
               </FlexRow>
             </Main>
           </div>
-        </App>
+        </MainContainer>
       </div>
     </>
   )
