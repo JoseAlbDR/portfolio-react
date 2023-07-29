@@ -1,4 +1,5 @@
 import './ContactForm.scss'
+import LinkButton from './LinkButton'
 function ContactForm() {
   return (
     <form className="contact-form">
@@ -28,6 +29,7 @@ function ContactForm() {
         cols="30"
         rows="10"
       ></textarea>
+      <LinkButton className="send-button">SEND</LinkButton>
     </form>
   )
 }

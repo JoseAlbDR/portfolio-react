@@ -1,7 +1,7 @@
 .contact-form {
   color: #8d8d8d;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 
   .contact-subject {
@@ -23,5 +23,13 @@
       color: #8d8d8d;
       padding: 0 10px;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
