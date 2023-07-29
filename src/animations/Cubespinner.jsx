@@ -1,5 +1,5 @@
 import CubeFace from './CubeFace'
-// import './CubeSpinner.scss'
+import './Cube.scss'
 function Cubespinner({ faces }) {
   return (
     <div className="cubespinner">
