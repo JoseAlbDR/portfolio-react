@@ -1,8 +1,18 @@
+import { useRef } from 'react'
 import './ContactForm.scss'
 import LinkButton from './LinkButton'
+import emailjs from '@emailjs/browser'
 function ContactForm() {
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs.sendForm()
+  }
+
   return (
-    <form className="contact-form">
+    <form method="POST" className="contact-form">
       <input
         className="contact-name"
         type="text"
