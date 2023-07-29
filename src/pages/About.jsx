@@ -25,6 +25,7 @@ function About() {
   const title = 'About me'.split('')
   return (
     <>
+      <LoadingAnimation type="pacman" />
       <div className="container about-page">
         <div className="text-zone">
           <SectionTitle title={title} />
@@ -34,7 +35,6 @@ function About() {
           <Cubespinner faces={faces} />
         </div>
       </div>
-      <LoadingAnimation type="pacman" />
     </>
   )
 }
