@@ -5,10 +5,22 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import { Toaster } from 'react-hot-toast'
+import { QueryClient } from '@tanstack/query-core'
+import { QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 0,
+    },
+  },
+})
 
 function App() {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate replace to="home" />} />
@@ -37,7 +49,7 @@ function App() {
           },
         }}
       />
-    </>
+    </QueryClientProvider>
   )
 }
 
