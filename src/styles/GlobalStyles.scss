@@ -2,6 +2,12 @@
   --primary-color: #1c7ed6;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -32,7 +38,8 @@ body {
   animation: fadeIn 1s 1.8s backwards;
   white-space: nowrap;
   transition: all 1s;
-  grid &:hover {
+
+  &:hover {
     background-color: #fff;
     color: #022c43;
   }
