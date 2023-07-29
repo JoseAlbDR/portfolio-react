@@ -1,6 +1,6 @@
 function AboutText() {
   return (
-    <>
+    <div className="about-text">
       <p>
         Hello, I&apos;m J. Alberto Delgado, a beginner web development student.
         My passion is solving problems through programming.
@@ -13,7 +13,7 @@ function AboutText() {
         My goal is to grow as a professional in web development and contribute
         my knowledge to future projects.
       </p>
-    </>
+    </div>
   )
 }
 

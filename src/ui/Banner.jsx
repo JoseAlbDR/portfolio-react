@@ -11,7 +11,7 @@ function Banner() {
   const jobLineTwo = 'Web Developer'.split('')
 
   return (
-    <div className="text-zone">
+    <>
       <h1>
         <span>
           <AnimatedLetters
@@ -49,7 +49,7 @@ function Banner() {
       <LinkButton to="/contact" className="flat-button">
         CONTACT ME
       </LinkButton>
-    </div>
+    </>
   )
 }
 
