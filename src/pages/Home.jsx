@@ -1,13 +1,17 @@
 import './Home.scss'
 import Logo from '../ui/Logo'
 import Banner from '../ui/Banner'
+import LoadingAnimation from '../animations/LoadingAnimation'
 
 function Home() {
   return (
-    <div className="container home-page">
-      <Banner />
-      <Logo />
-    </div>
+    <>
+      <LoadingAnimation />
+      <div className="container home-page">
+        <Banner />
+        <Logo />
+      </div>
+    </>
   )
 }
 

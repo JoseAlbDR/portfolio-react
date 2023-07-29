@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import Cubespinner from '../animations/Cubespinner'
 import AboutText from '../ui/AboutText'
+import LoadingAnimation from '../animations/LoadingAnimation'
 
 function About() {
   const { letterClass } = useAnimation(3)
@@ -26,23 +27,26 @@ function About() {
 
   const title = 'About me'.split('')
   return (
-    <div className="container about-page">
-      <div className="text-zone">
-        <h1>
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={title}
-            idx={15}
-          />
-        </h1>
-        <div className="about-text">
-          <AboutText />
+    <>
+      <div className="container about-page">
+        <div className="text-zone">
+          <h1>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={title}
+              idx={15}
+            />
+          </h1>
+          <div className="about-text">
+            <AboutText />
+          </div>
+        </div>
+        <div className="stage-cube-content">
+          <Cubespinner faces={faces} />
         </div>
       </div>
-      <div className="stage-cube-content">
-        <Cubespinner faces={faces} />
-      </div>
-    </div>
+      <LoadingAnimation type="pacman" />
+    </>
   )
 }
 
