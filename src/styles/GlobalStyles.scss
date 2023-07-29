@@ -39,7 +39,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   will-change: contents;
   opacity: 0;
   z-index: 1;
@@ -49,6 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .text-zone {
