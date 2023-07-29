@@ -12,6 +12,7 @@ import {
 import Cubespinner from '../animations/Cubespinner'
 import AboutText from '../ui/AboutText'
 import LoadingAnimation from '../animations/LoadingAnimation'
+import SectionTitle from '../ui/SectionTitle'
 
 function About() {
   const { letterClass } = useAnimation(3)
@@ -30,16 +31,8 @@ function About() {
     <>
       <div className="container about-page">
         <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={title}
-              idx={15}
-            />
-          </h1>
-          <div className="about-text">
-            <AboutText />
-          </div>
+          <SectionTitle title={title} />
+          <AboutText />
         </div>
         <div className="stage-cube-content">
           <Cubespinner faces={faces} />

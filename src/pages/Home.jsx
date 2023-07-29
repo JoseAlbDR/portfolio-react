@@ -8,7 +8,9 @@ function Home() {
     <>
       <LoadingAnimation />
       <div className="container home-page">
-        <Banner />
+        <div className="text-zone">
+          <Banner />
+        </div>
         <Logo />
       </div>
     </>
