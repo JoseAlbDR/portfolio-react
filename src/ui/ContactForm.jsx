@@ -1,75 +1,65 @@
 import { useRef, useState } from 'react'
 import './ContactForm.scss'
 import LinkButton from './LinkButton'
-import { sendEmail } from '../services/sendEmail'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { useSubmitForm } from '../hooks/useSubmitForm'
+import { useForm } from 'react-hook-form'
 
 function ContactForm() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
+  const { isSubmiting, submitForm } = useSubmitForm()
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm()
   const form = useRef()
-  const captchaRef = useRef(null)
+  // const captchaRef = useRef(null)
 
-  function reset() {
-    setName('')
-    setEmail('')
-    setSubject('')
-    setMessage('')
-  }
-
-  async function handleSubmit(e, form) {
-    let token = captchaRef.current.getValue()
-    console.log(token)
-
-    // if (token) {
-    //   let validToken = await verifyToken(token)
-    //   if (validToken.success) {
-    //     sendEmail(e, form)
-    //     reset()
-    //   } else {
-    //     throw new Error('Invalid token')
-    //   }
-    // }
-
-    sendEmail(e, form)
-    reset()
+  function onSubmitForm(formData) {
+    console.log(isSubmiting)
+    submitForm(formData, { onSuccess: () => reset() })
+    console.log(isSubmiting)
   }
 
   return (
     <form
       ref={form}
-      onSubmit={(e) => handleSubmit(e, form)}
+      onSubmit={handleSubmit(onSubmitForm)}
       className="contact-form"
-      method="POST"
     >
       <input
         className="contact-name"
         type="text"
+        id="user_name"
         name="user_name"
         placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
+        disabled={isSubmiting}
+        {...register('user_name', {
+          required: 'This field is required',
+        })}
       />
       <input
         className="contact-mail"
         type="email"
+        id="user_email"
         name="user_email"
         placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
+        disabled={isSubmiting}
+        {...register('user_email', {
+          required: 'This field is required',
+        })}
       />
       <input
         className="contact-subject"
         type="text"
+        id="subject"
         name="subject"
         placeholder="Subject"
-        value={subject}
-        onChange={(e) => setSubject(e.target.value)}
-        required
+        disabled={isSubmiting}
+        {...register('subject', {
+          required: 'This field is required',
+        })}
       />
       <textarea
         className="contact-message"
@@ -78,13 +68,14 @@ function ContactForm() {
         placeholder="Message"
         cols="30"
         rows="10"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        required
+        disabled={isSubmiting}
+        {...register('message', {
+          required: 'This field is required',
+        })}
       ></textarea>
       <ReCAPTCHA
         sitekey="6LdJXGYnAAAAAGhjLq6wplTaDc4Um_1NeBioHAA5"
-        ref={captchaRef}
+        // ref={captchaRef}
       />
 
       <LinkButton className="send-button">SEND</LinkButton>
