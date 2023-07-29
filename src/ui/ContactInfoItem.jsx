@@ -1,12 +1,15 @@
+import './ContactInfoItem.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import LinkButton from './LinkButton'
 
-function ContactInfoItem({ icon, url, title, color = '#fff' }) {
+function ContactInfoItem({ icon, url, title, color }) {
+  console.log(color)
   return (
     <li>
-      <FontAwesomeIcon icon={icon} color={color} />
-      <a href={url} rel="noreferrer" target="_blank">
+      <LinkButton to={url} className="info-item">
+        <FontAwesomeIcon icon={icon} color={color} />
         <h3>{title}</h3>
-      </a>
+      </LinkButton>
     </li>
   )
 }
