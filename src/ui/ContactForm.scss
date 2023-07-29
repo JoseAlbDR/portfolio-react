@@ -36,3 +36,32 @@
     gap: 10px;
   }
 }
+
+input {
+  animation: bounceInUp 2s;
+  animation-delay: 1s;
+  visibility: hidden;
+  &:nth-of-type(1) {
+    animation-delay: 0.5s;
+    visibility: visible;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 0.6s;
+    visibility: visible;
+  }
+  &:nth-of-type(3) {
+    animation-delay: 0.7s;
+    visibility: visible;
+  }
+}
+
+textarea {
+  animation: bounceInUp 2s;
+  animation-delay: 1s;
+  visibility: hidden;
+
+  &:nth-of-type(1) {
+    animation-delay: 0.8s;
+    visibility: visible;
+  }
+}
