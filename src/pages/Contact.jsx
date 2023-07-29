@@ -1,5 +1,7 @@
 import AnimatedLetters from '../animations/AnimatedLetters'
 import { useAnimation } from '../hooks/useAnimation'
+import ContactForm from '../ui/ContactForm'
+import ContactText from '../ui/ContactText'
 import './Contact.scss'
 function Contact() {
   const title = 'Contact me'.split('')
@@ -14,6 +16,8 @@ function Contact() {
             idx={15}
           />
         </h1>
+        <ContactText />
+        <ContactForm />
       </div>
     </div>
   )
