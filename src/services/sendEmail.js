@@ -1,4 +1,5 @@
 import emailjs from '@emailjs/browser'
+import { toast } from 'react-hot-toast'
 
 export const sendEmail = (e, form) => {
   e.preventDefault()
@@ -11,7 +12,7 @@ export const sendEmail = (e, form) => {
       import.meta.env.VITE_EMAILJS_KEY
     )
     .then(
-      (result) => console.log(result.text),
-      (error) => console.log(error.text)
+      (result) => toast.success('Email sent.'),
+      (error) => toast.error(error.text)
     )
 }
