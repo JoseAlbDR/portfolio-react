@@ -6,6 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import MainNavItem from './MainNavItem'
 import './MainNav.scss'
+import List from './List'
 
 function MainNav() {
   const navItems = [
@@ -33,14 +34,19 @@ function MainNav() {
 
   return (
     <nav>
-      {navItems.map((navItem, i) => (
-        <MainNavItem
-          key={i}
-          icon={navItem.icon}
-          to={navItem.to}
-          className={navItem.className}
+      {
+        <List
+          items={navItems}
+          render={(navItem, i) => (
+            <MainNavItem
+              key={i}
+              icon={navItem.icon}
+              to={navItem.to}
+              className={navItem.className}
+            />
+          )}
         />
-      ))}
+      }
     </nav>
   )
 }
