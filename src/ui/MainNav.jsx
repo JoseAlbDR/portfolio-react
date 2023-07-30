@@ -1,4 +1,9 @@
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import {
+  faEnvelope,
+  faEye,
+  faHome,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons'
 import MainNavItem from './MainNavItem'
 import './MainNav.scss'
 
@@ -17,6 +22,12 @@ function MainNav() {
         color="#fff"
         to="/contact"
         className="contact-link"
+      />
+      <MainNavItem
+        icon={faEye}
+        color="#fff"
+        to="/portfolio"
+        className="portfolio-link"
       />
     </nav>
   )
