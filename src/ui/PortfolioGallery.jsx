@@ -1,12 +1,23 @@
+import List from './List'
 import PortfolioGalleryItem from './PortfolioGalleryItem'
 
 function PortfolioGallery({ portfolio }) {
+  console.log(portfolio)
   return (
-    <div className="images-container">
-      {portfolio.map((project, i) => (
-        <PortfolioGalleryItem key={i} className="image-box" project={project} />
-      ))}
-    </div>
+    <>
+      {
+        <List
+          items={portfolio}
+          render={(project, i) => (
+            <PortfolioGalleryItem
+              key={i}
+              className="image-box"
+              project={project}
+            />
+          )}
+        />
+      }
+    </>
   )
 }
 
