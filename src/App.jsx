@@ -4,11 +4,11 @@ import Layout from './ui/AppLayout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Portfolio from './pages/Portfolio'
 import { Toaster } from 'react-hot-toast'
 import { QueryClient } from '@tanstack/query-core'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import Portfolio from './pages/Portfolio'
 
 const queryClient = new QueryClient({
   defaultOptions: {
