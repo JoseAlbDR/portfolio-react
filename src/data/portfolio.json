@@ -1,0 +1,16 @@
+{
+  "portfolio": [
+    {
+      "cover": "/portfolio/worldwise/WorldWise.png",
+      "title": "WorldWise",
+      "description": "React Web App que te permite hacer un seguimiento de las ciudades que has visitado alrededor dle mundo",
+      "url": "https://jadr-worldwide.netlify.app/"
+    },
+    {
+      "cover": "/portfolio/worldwise/WorldWise.png",
+      "title": "WorldWise",
+      "description": "React Web App que te permite hacer un seguimiento de las ciudades que has visitado alrededor dle mundo",
+      "url": "https://jadr-worldwide.netlify.app/"
+    }
+  ]
+}
