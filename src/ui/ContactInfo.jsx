@@ -8,6 +8,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import ContactInfoItem from './ContactInfoItem'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import List from './List'
 
 function ContactInfo() {
   const socialMedia = [
@@ -51,15 +52,18 @@ function ContactInfo() {
 
   return (
     <ul className="contact-list">
-      {socialMedia.map((item, i) => (
-        <ContactInfoItem
-          key={i}
-          icon={item.icon}
-          url={item.url}
-          title={item.title}
-          color={item.color}
-        />
-      ))}
+      <List
+        items={socialMedia}
+        render={(item, i) => (
+          <ContactInfoItem
+            key={i}
+            icon={item.icon}
+            url={item.url}
+            title={item.title}
+            color={item.color}
+          />
+        )}
+      />
     </ul>
   )
 }
