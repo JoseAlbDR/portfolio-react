@@ -8,7 +8,7 @@ import MainNavItem from './MainNavItem'
 import './MainNav.scss'
 import List from './List'
 
-function MainNav() {
+function MainNav({ showNav }) {
   const navItems = [
     {
       icon: faHome,
@@ -33,7 +33,7 @@ function MainNav() {
   ]
 
   return (
-    <nav>
+    <nav className={showNav ? 'mobile-show' : ''}>
       {
         <List
           items={navItems}
