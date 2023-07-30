@@ -1,18 +1,21 @@
-import AnimatedLetters from '../animations/AnimatedLetters'
 import LoadingAnimation from '../animations/LoadingAnimation'
-import { useAnimation } from '../hooks/useAnimation'
+import portfolioData from '../data/portfolio.json'
+import PortfolioGallery from '../ui/PortfolioGallery'
 import SectionTitle from '../ui/SectionTitle'
 import './Portfolio.scss'
 
 function Portfolio() {
-  const { letterClass } = useAnimation(4)
   const title = 'Portfolio'.split('')
+
   return (
     <>
       <LoadingAnimation />
-      <div className="container home-page">
+      <div className="container portfolio-page">
         <div className="text-zone">
           <SectionTitle title={title} />
+        </div>
+        <div className="images-container">
+          <PortfolioGallery portfolio={portfolioData.portfolio} />
         </div>
       </div>
     </>
