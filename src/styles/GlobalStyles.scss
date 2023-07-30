@@ -21,6 +21,7 @@ body {
   color: #fff;
   background: #022c43;
   height: 100vh;
+  overflow: scroll;
 }
 
 .flat-button {
@@ -125,6 +126,9 @@ h1 {
 }
 
 @media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
   h1 {
     font-size: 56px;
   }
