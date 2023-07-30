@@ -23,7 +23,7 @@
       a {
         padding: 7px 0;
         display: block;
-        font-size: 15px;
+        font-size: 22px;
         line-height: 16px;
 
         &:hover svg {
@@ -31,5 +31,120 @@
         }
       }
     }
+  }
+}
+
+.burger-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: none !important;
+    grid-template-rows: auto 1fr;
+    // height: 0;
+  }
+
+  .nav-bar {
+    height: auto;
+    min-height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #18181899;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+    }
+
+    nav {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 0;
+    }
+
+    nav {
+      background: #181818;
+      width: 100%;
+      height: auto;
+      display: flex;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      z-index: 999;
+      margin: 0;
+      transition: height 2s;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
+      a:after {
+        opacity: 1;
+        color: #fff;
+        position: initial;
+        width: auto;
+        margin-left: 10px;
+      }
+
+      &.mobile-show {
+        margin-top: 60px;
+        opacity: 1;
+        height: auto;
+        background: #18181899;
+        margin-top: 350px;
+        // animation: slideInLeft 1s;
+
+        a {
+          width: 100%;
+          border-bottom: 1px solid #fff;
+          visibility: hidden;
+          animation: zoomInDown 0.4s;
+          animation-delay: 0s;
+
+          &:nth-of-type(1) {
+            // animation-delay: 0.5s;
+            border-top: 1px solid #fff;
+            visibility: visible;
+          }
+          &:nth-of-type(2) {
+            // animation-delay: 0.1s;
+            visibility: visible;
+          }
+          &:nth-of-type(3) {
+            // animation-delay: 0.2s;
+            visibility: visible;
+          }
+          &:nth-of-type(4) {
+            // animation-delay: 0.3s;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    .burger-icon {
+      display: block;
+      align-self: flex-end;
+      padding: 15px;
+    }
+  }
+
+  a:hover svg {
+    opacity: 1 !important;
   }
 }
