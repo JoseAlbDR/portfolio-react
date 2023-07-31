@@ -51,20 +51,22 @@ function ContactInfo() {
   ]
 
   return (
-    <ul className="contact-list">
-      <List
-        items={socialMedia}
-        render={(item, i) => (
-          <ContactInfoItem
-            key={i}
-            icon={item.icon}
-            url={item.url}
-            title={item.title}
-            color={item.color}
-          />
-        )}
-      />
-    </ul>
+    <div className="contact-info">
+      <ul className="contact-list">
+        <List
+          items={socialMedia}
+          render={(item, i) => (
+            <ContactInfoItem
+              key={i}
+              icon={item.icon}
+              url={item.url}
+              title={item.title}
+              color={item.color}
+            />
+          )}
+        />
+      </ul>
+    </div>
   )
 }
 
