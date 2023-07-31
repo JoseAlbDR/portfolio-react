@@ -6,7 +6,7 @@ function PortfolioGallery() {
     <div className="images-container">
       {
         <List
-          items={portfolioData}
+          items={portfolioData.portfolio}
           render={(project, i) => (
             <PortfolioGalleryItem
               key={i}
