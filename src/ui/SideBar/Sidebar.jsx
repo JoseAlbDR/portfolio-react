@@ -4,7 +4,7 @@ import MainNav from './MainNav'
 import SocialMedia from './SocialMedia'
 import BurguerMenu from './BurguerMenu'
 import { ClickAwayListener } from '@mui/material'
-import { useSidebar } from '../../context/sidebarContext'
+import { useSidebar } from '../../context/SidebarContext'
 
 function Sidebar() {
   const { setShowNav } = useSidebar()

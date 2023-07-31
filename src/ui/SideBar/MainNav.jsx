@@ -7,7 +7,7 @@ import {
 import MainNavItem from './MainNavItem'
 import './MainNav.scss'
 import List from '../AppLayout/List'
-import { useSidebar } from '../../context/sidebarContext'
+import { useSidebar } from '../../context/SidebarContext'
 
 function MainNav() {
   const { showNav } = useSidebar()

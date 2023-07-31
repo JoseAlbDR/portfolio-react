@@ -1,7 +1,7 @@
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './BurguerMenu.scss'
-import { useSidebar } from '../../context/sidebarContext'
+import { useSidebar } from '../../context/SidebarContext'
 
 function BurguerMenu() {
   const { showNav, setShowNav } = useSidebar()
