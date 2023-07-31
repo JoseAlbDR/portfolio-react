@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import Sidebar from './Sidebar'
+import Sidebar from '../SideBar/Sidebar'
 import TopTags from './TopTags'
 import BottomTags from './BottomTags'
 import MainContainer from './MainContainer'

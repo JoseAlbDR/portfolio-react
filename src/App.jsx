@@ -1,6 +1,6 @@
 import './App.scss'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import Layout from './ui/AppLayout'
+import AppLayout from './ui/AppLayout/AppLayout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -23,7 +23,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<AppLayout />}>
           <Route index element={<Navigate replace to="home" />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />

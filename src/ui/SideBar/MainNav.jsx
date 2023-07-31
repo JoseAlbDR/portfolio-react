@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import MainNavItem from './MainNavItem'
 import './MainNav.scss'
-import List from './List'
+import List from '../AppLayout/List'
 
 function MainNav({ showNav }) {
   const navItems = [

@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import ContactInfoItem from './ContactInfoItem'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import List from './List'
+import List from '../AppLayout/List'
 
 function ContactInfo() {
   const socialMedia = [

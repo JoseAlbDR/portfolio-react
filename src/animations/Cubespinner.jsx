@@ -1,6 +1,6 @@
 import CubeFace from './CubeFace'
 import './Cube.scss'
-import List from '../ui/List'
+import List from '../ui/AppLayout/List'
 function Cubespinner({ faces }) {
   return (
     <div className="cubespinner">

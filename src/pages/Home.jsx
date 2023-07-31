@@ -1,6 +1,6 @@
 import './Home.scss'
-import Logo from '../ui/Logo'
-import Banner from '../ui/Banner'
+import Logo from '../ui/SideBar/Logo'
+import Banner from '../ui/Home/Banner'
 import LoadingAnimation from '../animations/LoadingAnimation'
 
 function Home() {

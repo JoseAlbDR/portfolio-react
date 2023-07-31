@@ -1,4 +1,4 @@
-import List from '../ui/List'
+import List from '../ui/AppLayout/List'
 import './AnimatedLetters.scss'
 
 function AnimatedLetters({ letterClass, strArray, idx }) {

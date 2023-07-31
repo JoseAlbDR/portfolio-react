@@ -1,8 +1,8 @@
 import LoadingAnimation from '../animations/LoadingAnimation'
-import ContactForm from '../ui/ContactForm'
-import ContactInfo from '../ui/ContactInfo'
-import ContactText from '../ui/ContactText'
-import SectionTitle from '../ui/SectionTitle'
+import ContactForm from '../ui/Contact/ContactForm'
+import ContactInfo from '../ui/Contact/ContactInfo'
+import ContactText from '../ui/Contact/ContactText'
+import SectionTitle from '../ui/AppLayout/SectionTitle'
 
 import './Contact.scss'
 function Contact() {

@@ -1,6 +1,6 @@
 import './ContactInfoItem.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import LinkButton from './LinkButton'
+import LinkButton from '../AppLayout/LinkButton'
 
 function ContactInfoItem({ icon, url, title, color }) {
   return (

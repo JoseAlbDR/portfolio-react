@@ -1,5 +1,5 @@
-import AnimatedLetters from '../animations/AnimatedLetters'
-import { useAnimation } from '../hooks/useAnimation'
+import AnimatedLetters from '../../animations/AnimatedLetters'
+import { useAnimation } from '../../hooks/useAnimation'
 
 function SectionTitle({ title }) {
   const { letterClass } = useAnimation(4)

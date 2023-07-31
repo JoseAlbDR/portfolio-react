@@ -1,7 +1,7 @@
 import LoadingAnimation from '../animations/LoadingAnimation'
 import portfolioData from '../data/portfolio.json'
-import PortfolioGallery from '../ui/PortfolioGallery'
-import SectionTitle from '../ui/SectionTitle'
+import PortfolioGallery from '../ui/Portfolio/PortfolioGallery'
+import SectionTitle from '../ui/AppLayout/SectionTitle'
 import './Portfolio.scss'
 
 function Portfolio() {

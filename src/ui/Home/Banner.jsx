@@ -1,8 +1,8 @@
-import AnimatedLetters from '../animations/AnimatedLetters'
-import LogoTitle from '../assets/images/logo.png'
-import LinkButton from './LinkButton'
-import '../animations/AnimatedLetters.scss'
-import { useAnimation } from '../hooks/useAnimation'
+import AnimatedLetters from '../../animations/AnimatedLetters'
+import LogoTitle from '../../assets/images/logo.png'
+import LinkButton from '../AppLayout/LinkButton'
+import '../../animations/AnimatedLetters.scss'
+import { useAnimation } from '../../hooks/useAnimation'
 
 function Banner() {
   const { letterClass } = useAnimation(4)

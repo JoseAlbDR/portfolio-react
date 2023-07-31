@@ -8,9 +8,9 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
 import Cubespinner from '../animations/Cubespinner'
-import AboutText from '../ui/AboutText'
+import AboutText from '../ui/About/AboutText'
 import LoadingAnimation from '../animations/LoadingAnimation'
-import SectionTitle from '../ui/SectionTitle'
+import SectionTitle from '../ui/AppLayout/SectionTitle'
 
 function About() {
   const faces = [
