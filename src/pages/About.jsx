@@ -22,7 +22,7 @@ function About() {
     { className: 'face6', icon: faAngular, color: '#DD0031' },
   ]
 
-  const title = 'About me'.split('')
+  const title = 'About me'
   return (
     <>
       <LoadingAnimation type="pacman" />

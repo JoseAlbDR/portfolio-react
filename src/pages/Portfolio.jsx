@@ -5,7 +5,7 @@ import SectionTitle from '../ui/SectionTitle'
 import './Portfolio.scss'
 
 function Portfolio() {
-  const title = 'Portfolio'.split('')
+  const title = 'Portfolio'
 
   return (
     <>

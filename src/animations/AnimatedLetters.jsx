@@ -2,6 +2,7 @@ import List from '../ui/List'
 import './AnimatedLetters.scss'
 
 function AnimatedLetters({ letterClass, strArray, idx }) {
+  strArray = strArray.split('')
   return (
     <span>
       {

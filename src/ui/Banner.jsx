@@ -6,31 +6,19 @@ import { useAnimation } from '../hooks/useAnimation'
 
 function Banner() {
   const { letterClass } = useAnimation(4)
-  const name = '.Alberto'.split('')
-  const jobLineOne = 'Full Stack'.split('')
-  const jobLineTwo = 'Web Developer'.split('')
+  const name = '.Alberto'
+  const jobLineOne = 'Full Stack'
+  const jobLineTwo = 'Web Developer'
 
   return (
     <>
       <h1>
         <span>
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={['H', 'i,']}
-            idx={12}
-          />
+          <AnimatedLetters letterClass={letterClass} strArray={'Hi'} idx={12} />
         </span>
         <span>
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={['I']}
-            idx={13}
-          />
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={[`'m`]}
-            idx={14}
-          />
+          <AnimatedLetters letterClass={letterClass} strArray={'I'} idx={13} />
+          <AnimatedLetters letterClass={letterClass} strArray={`'m`} idx={14} />
           <img src={LogoTitle} alt="developer" />
           <AnimatedLetters letterClass={letterClass} strArray={name} idx={15} />
         </span>

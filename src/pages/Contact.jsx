@@ -6,7 +6,7 @@ import SectionTitle from '../ui/SectionTitle'
 
 import './Contact.scss'
 function Contact() {
-  const title = 'Contact me'.split('')
+  const title = 'Contact me'
   return (
     <>
       <LoadingAnimation type="pacman" />
