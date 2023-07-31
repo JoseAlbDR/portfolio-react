@@ -32,7 +32,7 @@ function ContactInfo() {
     },
     {
       icon: faDiscord,
-      url: 'https://discord.com/app/469452782303313921',
+      url: 'https://discordapp.com/users/469452782303313921',
       title: 'Discord',
       color: '#28A4D9',
     },

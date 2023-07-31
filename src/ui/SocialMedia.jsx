@@ -27,7 +27,7 @@ function SocialMedia() {
       <SocialMediaItem
         icon={faDiscord}
         color="#fff"
-        href="https://discord.com/app/469452782303313921"
+        href="https://discordapp.com/users/469452782303313921"
       />
     </ul>
   )
