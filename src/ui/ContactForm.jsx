@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import './ContactForm.scss'
 import LinkButton from './LinkButton'
 import ReCAPTCHA from 'react-google-recaptcha'
@@ -9,6 +9,7 @@ import Loader from 'react-loaders'
 
 function ContactForm() {
   const test = true
+  const [animation, setAnimation] = useState(true)
   const { isSubmiting, submitForm } = useSubmitForm()
   const {
     register,
@@ -23,6 +24,7 @@ function ContactForm() {
     let token = captchaRef.current.getValue()
     if (token) {
       submitForm({ formData, token }, { onSuccess: () => reset() })
+      setAnimation(false)
     } else {
       toast.error('You must confirm you are not a robot')
       // throw new Error('You must confirm you are not a robot')
@@ -43,7 +45,7 @@ function ContactForm() {
       className="contact-form"
     >
       <input
-        className="contact-name"
+        className={`contact-name ${!animation ? 'form-animation' : ''}`}
         type="text"
         id="user_name"
         name="user_name"
@@ -54,7 +56,7 @@ function ContactForm() {
         })}
       />
       <input
-        className="contact-mail"
+        className={`contact-mail ${!animation ? 'form-animation' : ''}`}
         type="email"
         id="user_email"
         name="user_email"
@@ -65,7 +67,7 @@ function ContactForm() {
         })}
       />
       <input
-        className="contact-subject"
+        className={`contact-subject ${!animation ? 'form-animation' : ''}`}
         type="text"
         id="subject"
         name="subject"
@@ -76,7 +78,7 @@ function ContactForm() {
         })}
       />
       <textarea
-        className="contact-message"
+        className={`contact-message ${!animation ? 'form-animation' : ''}`}
         name="message"
         id="message"
         placeholder="Message"
