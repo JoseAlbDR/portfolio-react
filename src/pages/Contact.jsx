@@ -3,23 +3,23 @@ import ContactForm from '../ui/Contact/ContactForm'
 import ContactInfo from '../ui/Contact/ContactInfo'
 import ContactText from '../ui/Contact/ContactText'
 import SectionTitle from '../ui/AppLayout/SectionTitle'
+import Container from '../ui/AppLayout/Container'
 
 import './Contact.scss'
+import TextZone from '../ui/AppLayout/TextZone'
 function Contact() {
   const title = 'Contact me'
   return (
     <>
       <LoadingAnimation type="pacman" />
-      <div className="container contact-page">
-        <div className="text-zone">
+      <Container type="contact">
+        <TextZone>
           <SectionTitle title={title} />
           <ContactText />
           <ContactForm />
-        </div>
-        <div className="contact-info">
-          <ContactInfo />
-        </div>
-      </div>
+        </TextZone>
+        <ContactInfo />
+      </Container>
     </>
   )
 }

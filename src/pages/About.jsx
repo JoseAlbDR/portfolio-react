@@ -11,6 +11,8 @@ import Cubespinner from '../animations/Cubespinner'
 import AboutText from '../ui/About/AboutText'
 import LoadingAnimation from '../animations/LoadingAnimation'
 import SectionTitle from '../ui/AppLayout/SectionTitle'
+import Container from '../ui/AppLayout/Container'
+import TextZone from '../ui/AppLayout/TextZone'
 
 function About() {
   const faces = [
@@ -26,15 +28,13 @@ function About() {
   return (
     <>
       <LoadingAnimation type="pacman" />
-      <div className="container about-page">
-        <div className="text-zone">
+      <Container type="about">
+        <TextZone>
           <SectionTitle title={title} />
           <AboutText />
-        </div>
-        <div className="stage-cube-content">
-          <Cubespinner faces={faces} />
-        </div>
-      </div>
+        </TextZone>
+        <Cubespinner faces={faces} />
+      </Container>
     </>
   )
 }

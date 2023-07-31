@@ -1,8 +1,10 @@
 import LoadingAnimation from '../animations/LoadingAnimation'
-import portfolioData from '../data/portfolio.json'
+
 import PortfolioGallery from '../ui/Portfolio/PortfolioGallery'
 import SectionTitle from '../ui/AppLayout/SectionTitle'
 import './Portfolio.scss'
+import Container from '../ui/AppLayout/Container'
+import TextZone from '../ui/AppLayout/TextZone'
 
 function Portfolio() {
   const title = 'Portfolio'
@@ -10,14 +12,12 @@ function Portfolio() {
   return (
     <>
       <LoadingAnimation />
-      <div className="container portfolio-page">
-        <div className="text-zone">
+      <Container type="portfolio">
+        <TextZone>
           <SectionTitle title={title} />
-        </div>
-        <div className="images-container">
-          <PortfolioGallery portfolio={portfolioData.portfolio} />
-        </div>
-      </div>
+        </TextZone>
+        <PortfolioGallery />
+      </Container>
     </>
   )
 }
