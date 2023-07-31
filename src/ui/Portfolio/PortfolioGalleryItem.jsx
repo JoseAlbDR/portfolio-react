@@ -1,5 +1,4 @@
 function PortfolioGalleryItem({ project, className }) {
-  console.log(project)
   return (
     <div className={className}>
       <img

@@ -1,13 +1,12 @@
 import List from '../AppLayout/List'
 import PortfolioGalleryItem from './PortfolioGalleryItem'
-
-function PortfolioGallery({ portfolio }) {
-  console.log(portfolio)
+import portfolioData from '../../data/portfolio.json'
+function PortfolioGallery() {
   return (
-    <>
+    <div className="images-container">
       {
         <List
-          items={portfolio}
+          items={portfolioData}
           render={(project, i) => (
             <PortfolioGalleryItem
               key={i}
@@ -17,7 +16,7 @@ function PortfolioGallery({ portfolio }) {
           )}
         />
       }
-    </>
+    </div>
   )
 }
 
