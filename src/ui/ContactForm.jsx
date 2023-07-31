@@ -75,6 +75,7 @@ function ContactForm() {
       ></textarea>
       <ReCAPTCHA
         sitekey="6LdJXGYnAAAAAGhjLq6wplTaDc4Um_1NeBioHAA5"
+        className="recaptcha"
         // ref={captchaRef}
       />
 
