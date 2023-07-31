@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 
-function LinkButton({ to, className, children }) {
+function LinkButton({ to, className, children, disabled }) {
   if (!to)
     return (
-      <button type="submit" className={className}>
+      <button disabled={disabled} type="submit" className={className}>
         {children}
       </button>
     )

@@ -1,9 +1,11 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import './ContactForm.scss'
 import LinkButton from './LinkButton'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { useSubmitForm } from '../hooks/useSubmitForm'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-hot-toast'
+import Loader from 'react-loaders'
 
 function ContactForm() {
   const { isSubmiting, submitForm } = useSubmitForm()
@@ -14,13 +16,24 @@ function ContactForm() {
     formState: { errors },
   } = useForm()
   const form = useRef()
-  // const captchaRef = useRef(null)
+  const captchaRef = useRef(null)
 
   function onSubmitForm(formData) {
-    console.log(isSubmiting)
-    submitForm(formData, { onSuccess: () => reset() })
-    console.log(isSubmiting)
+    let token = captchaRef.current.getValue()
+    if (token) {
+      submitForm({ formData, token }, { onSuccess: () => reset() })
+    } else {
+      toast.error('You must confirm you are not a robot')
+      // throw new Error('You must confirm you are not a robot')
+    }
   }
+
+  if (isSubmiting)
+    return (
+      <div className="spinner">
+        <Loader type="ball-spin-fade-loader" />
+      </div>
+    )
 
   return (
     <form
@@ -75,11 +88,12 @@ function ContactForm() {
       ></textarea>
       <ReCAPTCHA
         sitekey="6LdJXGYnAAAAAGhjLq6wplTaDc4Um_1NeBioHAA5"
-        className="recaptcha"
-        // ref={captchaRef}
+        ref={captchaRef}
       />
 
-      <LinkButton className="send-button">SEND</LinkButton>
+      <LinkButton disabled={isSubmiting} className="send-button">
+        SEND
+      </LinkButton>
     </form>
   )
 }
