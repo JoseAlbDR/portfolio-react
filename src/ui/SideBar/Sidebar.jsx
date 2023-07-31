@@ -3,24 +3,23 @@ import SideLogo from './SideLogo'
 import MainNav from './MainNav'
 import SocialMedia from './SocialMedia'
 import BurguerMenu from './BurguerMenu'
-import { useState } from 'react'
 import { ClickAwayListener } from '@mui/material'
+import { useSidebar } from '../../context/sidebarContext'
 
 function Sidebar() {
-  const [showNav, setShowNav] = useState(false)
-  console.log(showNav)
+  const { setShowNav } = useSidebar()
 
   const handleClickAway = () => {
     setShowNav(false)
   }
 
   return (
-    <ClickAwayListener onClickAway={handleClickAway}>
+    <ClickAwayListener onClickAway={() => setShowNav(false)}>
       <div className="nav-bar">
         <SideLogo />
-        <MainNav showNav={showNav} />
+        <MainNav />
         <SocialMedia />
-        <BurguerMenu showNav={showNav} onSetShowNav={setShowNav} />
+        <BurguerMenu />
       </div>
     </ClickAwayListener>
   )

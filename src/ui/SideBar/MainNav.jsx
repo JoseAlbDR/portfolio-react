@@ -7,8 +7,11 @@ import {
 import MainNavItem from './MainNavItem'
 import './MainNav.scss'
 import List from '../AppLayout/List'
+import { useSidebar } from '../../context/sidebarContext'
 
-function MainNav({ showNav }) {
+function MainNav() {
+  const { showNav } = useSidebar()
+
   const navItems = [
     {
       icon: faHome,
