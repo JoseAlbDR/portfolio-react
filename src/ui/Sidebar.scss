@@ -21,7 +21,7 @@
 
     li {
       a {
-        padding: 7px 0;
+        padding: 10px 0;
         display: block;
         font-size: 22px;
         line-height: 16px;
@@ -85,7 +85,8 @@
       position: fixed;
       z-index: 999;
       margin: 0;
-      transition: height 2s;
+      transition: opacity 1s ease-in;
+
       a {
         display: flex;
         align-items: center;

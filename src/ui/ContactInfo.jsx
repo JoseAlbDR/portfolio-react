@@ -44,7 +44,7 @@ function ContactInfo() {
     },
     {
       icon: faCodepen,
-      url: 'https://www.linkedin.com/in/jalbertodelgado/',
+      url: 'https://codesandbox.io/u/josealbdr',
       title: 'CodeSandBox',
       color: '#fff',
     },

@@ -9,7 +9,7 @@ function LinkButton({ to, className, children }) {
     )
 
   return (
-    <Link to={to} className={className}>
+    <Link to={to} className={className} target="_blank">
       {children}
     </Link>
   )
