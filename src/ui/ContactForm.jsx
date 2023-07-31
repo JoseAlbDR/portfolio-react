@@ -8,6 +8,7 @@ import { toast } from 'react-hot-toast'
 import Loader from 'react-loaders'
 
 function ContactForm() {
+  const test = true
   const { isSubmiting, submitForm } = useSubmitForm()
   const {
     register,

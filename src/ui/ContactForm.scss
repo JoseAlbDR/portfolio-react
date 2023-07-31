@@ -68,4 +68,12 @@ textarea {
 
 .spinner {
   height: 436.18px;
+  .loader.loader-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: initial;
+    align-self: flex-start;
+    height: 100%;
+  }
 }
