@@ -4,7 +4,7 @@ import { toast } from 'react-hot-toast'
 
 export const useSubmitForm = () => {
   const { isLoading: isSubmiting, mutate: submitForm } = useMutation({
-    mutationFn: sendEmail,
+    mutationFn: ({ formData, token }) => sendEmail(formData, token),
     onSuccess: () => toast.success('Message sent successfully'),
     onError: (err) => toast.error(err.message),
   })
