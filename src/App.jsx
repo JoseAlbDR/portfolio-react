@@ -9,6 +9,7 @@ import { Toaster } from 'react-hot-toast'
 import { QueryClient } from '@tanstack/query-core'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import SidebarProvider from './context/SidebarContext'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,15 +23,17 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
-      <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route index element={<Navigate replace to="home" />} />
-          <Route path="home" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="portfolio" element={<Portfolio />} />
-        </Route>
-      </Routes>
+      <SidebarProvider>
+        <Routes>
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<Navigate replace to="home" />} />
+            <Route path="home" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="portfolio" element={<Portfolio />} />
+          </Route>
+        </Routes>
+      </SidebarProvider>
       <Toaster
         postition="top-center"
         gutter={12}

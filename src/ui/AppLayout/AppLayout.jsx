@@ -6,7 +6,6 @@ import MainContainer from './MainContainer'
 import Main from './Main'
 import FlexRow from './FlexRow'
 import './AppLayout.scss'
-import SidebarProvider from '../../context/SidebarContext'
 
 function AppLayout() {
   return (
@@ -14,9 +13,7 @@ function AppLayout() {
       <div className="bg"></div>
       <div className="content">
         <MainContainer>
-          <SidebarProvider>
-            <Sidebar />
-          </SidebarProvider>
+          <Sidebar />
           <div className="of-sc">
             <Main>
               <FlexRow>
