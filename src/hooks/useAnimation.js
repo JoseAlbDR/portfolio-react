@@ -7,7 +7,7 @@ export const useAnimation = (delay) => {
     setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, delay * 1000)
-  })
+  }, [delay])
 
   return { letterClass }
 }
