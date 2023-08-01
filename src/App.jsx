@@ -9,7 +9,7 @@ import { Toaster } from 'react-hot-toast'
 import { QueryClient } from '@tanstack/query-core'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import SidebarProvider from './context/SidebarContext'
+import { SidebarProvider } from './context/SidebarContext.jsx'
 
 const queryClient = new QueryClient({
   defaultOptions: {
