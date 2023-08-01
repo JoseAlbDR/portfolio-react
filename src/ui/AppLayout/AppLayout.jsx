@@ -6,7 +6,7 @@ import MainContainer from './MainContainer'
 import Main from './Main'
 import FlexRow from './FlexRow'
 import './AppLayout.scss'
-import { SidebarProvider } from '../../context/SidebarContext'
+import SidebarProvider from '../../context/SidebarContext'
 
 function AppLayout() {
   return (

@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from 'react'
 
 const SidebarContext = createContext()
 
-function SidebarProvider({ children }) {
+export default function SidebarProvider({ children }) {
   const [showNav, setShowNav] = useState(false)
 
   return (
@@ -12,11 +12,9 @@ function SidebarProvider({ children }) {
   )
 }
 
-function useSidebar() {
+export function useSidebar() {
   const context = useContext(SidebarContext)
   if (context === undefined)
     throw new Error('SidebarContext was used outside of the SidebarProvider')
   return context
 }
-
-export { SidebarProvider, useSidebar }
