@@ -2,19 +2,30 @@ import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './BurguerMenu.scss'
 import { useSidebar } from '../../context/SidebarContext'
+import { useEffect, useRef } from 'react'
 
 function BurguerMenu() {
-  const { showNav, setShowNav, navBar } = useSidebar()
+  const {
+    showNav,
+    setShowNav,
+    // navBar: { current: nav },
+  } = useSidebar()
+
+  const navBar = useRef()
+  useEffect(() => {
+    navBar.current = document.getElementById('mobile')
+    console.log(navBar.current)
+  }, [])
 
   function handleOpen() {
     setShowNav(true)
-    navBar.style.display = 'flex'
+    navBar.current.style.display = 'flex'
   }
 
   function handleClose() {
     setShowNav(false)
     setTimeout(() => {
-      navBar.style.display = 'none'
+      navBar.current.style.display = 'none'
     }, 400)
   }
 

@@ -36,7 +36,11 @@ function MainNav() {
   ]
 
   return (
-    <nav id="mobile" className={showNav ? 'mobile-show' : 'mobile-hide'}>
+    <nav
+      id="mobile"
+      style={{ display: 'none' }}
+      className={showNav ? 'mobile-show' : 'mobile-hide'}
+    >
       {
         <List
           items={navItems}

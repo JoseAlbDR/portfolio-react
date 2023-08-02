@@ -1,10 +1,14 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 
 const SidebarContext = createContext()
 
 function SidebarProvider({ children }) {
-  const [showNav, setShowNav] = useState(false)
-  const navBar = document.getElementById('mobile')
+  const [showNav, setShowNav] = useState(null)
+  const navBar = useRef()
+
+  useEffect(() => {
+    navBar.current = document.getElementById('mobile')
+  }, [])
 
   return (
     <SidebarContext.Provider value={{ showNav, setShowNav, navBar }}>

@@ -5,15 +5,26 @@ import SocialMedia from './SocialMedia'
 import BurguerMenu from './BurguerMenu'
 import { ClickAwayListener } from '@mui/material'
 import { useSidebar } from '../../context/SidebarContext'
+import { useRef } from 'react'
+import { useEffect } from 'react'
 
 function Sidebar() {
-  const { setShowNav, navBar } = useSidebar()
+  const {
+    setShowNav,
+    // navBar: { current: nav },
+  } = useSidebar()
+
+  const navBar = useRef()
+  useEffect(() => {
+    navBar.current = document.getElementById('mobile')
+    console.log(navBar.current)
+  }, [])
 
   const handleClickAway = () => {
     setShowNav(false)
 
     setTimeout(() => {
-      navBar.style.display = 'none'
+      navBar.current.style.display = 'none'
     }, 400)
 
     console.log(navBar.style)
