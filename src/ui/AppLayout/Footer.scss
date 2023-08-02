@@ -1,13 +1,21 @@
 .footer {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  z-index: 999;
+  background: #18181899;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+
   ul {
+    height: 63px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    padding: 0;
     list-style: none;
     text-align: center;
-    background: #18181899;
 
     li {
       a {
@@ -22,6 +30,10 @@
       }
     }
   }
+}
+
+.footer.down {
+  bottom: -63px;
 }
 
 @media (min-width: 768px) {

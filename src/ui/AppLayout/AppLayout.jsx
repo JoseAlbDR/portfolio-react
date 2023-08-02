@@ -25,9 +25,9 @@ function AppLayout() {
                 <TopTags />
                 <Outlet />
                 <BottomTags />
-                <Footer />
               </FlexRow>
             </Main>
+            <Footer />
           </div>
         </MainContainer>
       </div>
