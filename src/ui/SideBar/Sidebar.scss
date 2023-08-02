@@ -48,7 +48,7 @@
   .nav-bar {
     position: sticky;
     top: 0;
-    height: auto;
+    height: 63px;
     min-height: auto;
     width: 100%;
     display: flex;
@@ -56,7 +56,9 @@
     align-items: center;
     justify-content: space-between;
     background: #18181899;
-    transition: height 1.1s linear;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
 
     .logo {
       display: flex;
@@ -141,4 +143,8 @@
 
 .hidden-nav {
   display: none;
+}
+
+.nav-bar.down {
+  top: -63px;
 }

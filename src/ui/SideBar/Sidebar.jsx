@@ -7,13 +7,14 @@ import { ClickAwayListener } from '@mui/material'
 import { useSidebar } from '../../context/SidebarContext'
 import { useRef } from 'react'
 import { useEffect } from 'react'
+import { useScrollDirection } from '../../hooks/useScrollDirection'
 
 function Sidebar() {
   const {
     setShowNav,
     // navBar: { current: nav },
   } = useSidebar()
-
+  const scrollDirection = useScrollDirection()
   const navBar = useRef()
   useEffect(() => {
     navBar.current = document.getElementById('mobile')
@@ -26,13 +27,11 @@ function Sidebar() {
     setTimeout(() => {
       navBar.current.style.display = 'none'
     }, 400)
-
-    console.log(navBar.style)
   }
 
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
-      <div className="nav-bar">
+      <div className={`nav-bar ${scrollDirection === 'down' ? 'down' : ''}`}>
         <SideLogo />
         <MainNav />
         <SocialMedia />
