@@ -15,17 +15,20 @@ function Sidebar() {
     // navBar: { current: nav },
   } = useSidebar()
   const scrollDirection = useScrollDirection()
+
   const navBar = useRef()
   useEffect(() => {
     navBar.current = document.getElementById('mobile')
-    console.log(navBar.current)
+    // navBar.current.classList.add('hidden-nav')
+    // navBar.current.classList
   }, [])
 
   const handleClickAway = () => {
     setShowNav(false)
 
     setTimeout(() => {
-      navBar.current.style.display = 'none'
+      navBar.current.classList.add('hidden-nav')
+      navBar.current.classList.remove('show-nav')
     }, 400)
   }
 
@@ -34,8 +37,8 @@ function Sidebar() {
       <div className={`nav-bar ${scrollDirection === 'down' ? 'down' : ''}`}>
         <SideLogo />
         <MainNav />
-        <SocialMedia />
         <BurguerMenu />
+        <SocialMedia />
       </div>
     </ClickAwayListener>
   )

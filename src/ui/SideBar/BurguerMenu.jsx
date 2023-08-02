@@ -14,19 +14,21 @@ function BurguerMenu() {
   const navBar = useRef()
   useEffect(() => {
     navBar.current = document.getElementById('mobile')
-    console.log(navBar.current)
   }, [])
 
   function handleOpen() {
     setShowNav(true)
     navBar.current.style.display = 'flex'
+    navBar.current.classList.remove('hidden-nav')
+    navBar.current.classList.add('show-nav')
   }
 
   function handleClose() {
     setShowNav(false)
     setTimeout(() => {
-      navBar.current.style.display = 'none'
-    }, 400)
+      navBar.current.classList.add('hidden-nav')
+      navBar.current.classList.remove('show-nav')
+    }, 4000)
   }
 
   return (

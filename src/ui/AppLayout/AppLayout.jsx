@@ -7,6 +7,8 @@ import Main from './Main'
 import FlexRow from './FlexRow'
 import './AppLayout.scss'
 import { SidebarProvider } from '../../context/SidebarContext'
+import SocialMedia from '../SideBar/SocialMedia'
+import Footer from './Footer'
 
 function AppLayout() {
   return (
@@ -23,6 +25,7 @@ function AppLayout() {
                 <TopTags />
                 <Outlet />
                 <BottomTags />
+                <Footer />
               </FlexRow>
             </Main>
           </div>
