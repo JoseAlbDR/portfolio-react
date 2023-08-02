@@ -15,7 +15,7 @@ function BurguerMenu() {
     setShowNav(false)
     setTimeout(() => {
       navBar.style.display = 'none'
-    }, 1000)
+    }, 400)
   }
 
   return (

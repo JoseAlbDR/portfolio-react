@@ -14,7 +14,7 @@ function Sidebar() {
 
     setTimeout(() => {
       navBar.style.display = 'none'
-    }, 1000)
+    }, 400)
 
     console.log(navBar.style)
   }
