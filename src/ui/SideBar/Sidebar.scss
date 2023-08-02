@@ -56,10 +56,6 @@ nav {
     display: none;
   }
 
-  // nav {
-  //   display: none !important;
-  // }
-
   .app {
     grid-template-columns: none !important;
     grid-template-rows: auto 1fr;
@@ -97,7 +93,8 @@ nav {
       z-index: 999;
       margin: 0;
       position: absolute;
-      display: flex;
+      // display: flex;
+      display: none;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;

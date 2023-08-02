@@ -28,7 +28,7 @@ function BurguerMenu() {
     setTimeout(() => {
       navBar.current.classList.add('hidden-nav')
       navBar.current.classList.remove('show-nav')
-    }, 4000)
+    }, 400)
   }
 
   return (

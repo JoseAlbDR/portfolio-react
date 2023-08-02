@@ -38,7 +38,7 @@ function MainNav() {
   return (
     <nav
       id="mobile"
-      style={{ display: 'none' }}
+      // style={{ display: 'none' }}
       className={showNav ? 'mobile-show' : 'mobile-hide'}
     >
       {
