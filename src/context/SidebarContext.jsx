@@ -4,9 +4,10 @@ const SidebarContext = createContext()
 
 function SidebarProvider({ children }) {
   const [showNav, setShowNav] = useState(false)
+  const navBar = document.getElementById('mobile')
 
   return (
-    <SidebarContext.Provider value={{ showNav, setShowNav }}>
+    <SidebarContext.Provider value={{ showNav, setShowNav, navBar }}>
       {children}
     </SidebarContext.Provider>
   )
