@@ -7,14 +7,20 @@ import { ClickAwayListener } from '@mui/material'
 import { useSidebar } from '../../context/SidebarContext'
 
 function Sidebar() {
-  const { setShowNav } = useSidebar()
+  const { setShowNav, navBar } = useSidebar()
 
   const handleClickAway = () => {
     setShowNav(false)
+
+    setTimeout(() => {
+      navBar.style.display = 'none'
+    }, 1000)
+
+    console.log(navBar.style)
   }
 
   return (
-    <ClickAwayListener onClickAway={() => setShowNav(false)}>
+    <ClickAwayListener onClickAway={handleClickAway}>
       <div className="nav-bar">
         <SideLogo />
         <MainNav />

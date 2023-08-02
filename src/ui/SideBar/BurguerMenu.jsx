@@ -4,12 +4,25 @@ import './BurguerMenu.scss'
 import { useSidebar } from '../../context/SidebarContext'
 
 function BurguerMenu() {
-  const { showNav, setShowNav } = useSidebar()
+  const { showNav, setShowNav, navBar } = useSidebar()
+
+  function handleOpen() {
+    setShowNav(true)
+    navBar.style.display = 'flex'
+  }
+
+  function handleClose() {
+    setShowNav(false)
+    setTimeout(() => {
+      navBar.style.display = 'none'
+    }, 1000)
+  }
+
   return (
     <>
       {!showNav ? (
         <FontAwesomeIcon
-          onClick={() => setShowNav((showNav) => !showNav)}
+          onClick={handleOpen}
           icon={faBars}
           color="#1c7ed6"
           size="3x"
@@ -17,7 +30,7 @@ function BurguerMenu() {
         />
       ) : (
         <FontAwesomeIcon
-          onClick={() => setShowNav((showNav) => !showNav)}
+          onClick={handleClose}
           icon={faClose}
           color="#1c7ed6"
           size="3x"
