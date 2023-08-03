@@ -4,10 +4,8 @@ import TopTags from './TopTags'
 import BottomTags from './BottomTags'
 import MainContainer from './MainContainer'
 import Main from './Main'
-import FlexRow from './FlexRow'
 import './AppLayout.scss'
 import { SidebarProvider } from '../../context/SidebarContext'
-import SocialMedia from '../SideBar/SocialMedia'
 import Footer from './Footer'
 
 function AppLayout() {

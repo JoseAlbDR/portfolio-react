@@ -2,6 +2,7 @@ import {
   faEnvelope,
   faHome,
   faProjectDiagram,
+  faSuitcase,
   faUser,
 } from '@fortawesome/free-solid-svg-icons'
 import MainNavItem from './MainNavItem'
@@ -29,7 +30,7 @@ function MainNav() {
       className: 'contact-link',
     },
     {
-      icon: faProjectDiagram,
+      icon: faSuitcase,
       to: '/portfolio',
       className: 'portfolio-link',
     },
