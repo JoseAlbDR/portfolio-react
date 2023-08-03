@@ -19,16 +19,12 @@ function AppLayout() {
           <SidebarProvider>
             <Sidebar />
           </SidebarProvider>
-          <div className="of-sc">
-            <Main>
-              <FlexRow>
-                <TopTags />
-                <Outlet />
-                <BottomTags />
-              </FlexRow>
-            </Main>
-            <Footer />
-          </div>
+          <Main>
+            <TopTags />
+            <Outlet />
+            <BottomTags />
+          </Main>
+          <Footer />
         </MainContainer>
       </div>
     </>

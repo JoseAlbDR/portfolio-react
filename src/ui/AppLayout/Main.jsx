@@ -1,6 +1,12 @@
 import './Main.scss'
 function Main({ children }) {
-  return <main className="page">{children}</main>
+  return (
+    <div className="of-sc">
+      <main className="page">
+        <div className="flex-row">{children}</div>
+      </main>
+    </div>
+  )
 }
 
 export default Main
