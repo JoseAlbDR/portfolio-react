@@ -1,5 +1,6 @@
 import {
   faEnvelope,
+  faHammer,
   faHome,
   faProjectDiagram,
   faSuitcase,
@@ -33,6 +34,11 @@ function MainNav() {
       icon: faSuitcase,
       to: '/portfolio',
       className: 'portfolio-link',
+    },
+    {
+      icon: faHammer,
+      to: '/skills',
+      className: 'skills-link',
     },
   ]
 
