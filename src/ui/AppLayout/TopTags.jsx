@@ -1,8 +1,10 @@
+import Tag from './Tag'
+
 function TopTags() {
   return (
     <>
-      <span className="tags tag-html">&lt;html&gt;</span>
-      <span className="tags top-tags">&lt;body&gt;</span>
+      <Tag type="tag-html">&lt;html&gt;</Tag>
+      <Tag type="top-tags">&lt;body&gt;</Tag>
     </>
   )
 }

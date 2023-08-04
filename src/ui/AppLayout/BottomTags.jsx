@@ -1,8 +1,10 @@
+import Tag from './Tag'
+
 function BottomTags() {
   return (
     <>
-      <span className="tags">&lt;/body&gt;</span>
-      <span className="tags tag-html">&lt;/html&gt;</span>
+      <Tag>&lt;/body&gt;</Tag>
+      <Tag type="tag-html">&lt;/html&gt;</Tag>
     </>
   )
 }
