@@ -2,16 +2,16 @@ function AboutText() {
   return (
     <div>
       <p>
-        Hello, I&apos;m J. Alberto Delgado, a beginner web development student.
-        My passion is solving problems through programming.
+        Experienced web developer with expertise in React, Redux, TypeScript,
+        and VSCode for interactive and scalable applications.
       </p>
       <p>
-        Currently, I am attending a full-stack web development bootcamp,
-        expanding my skills in front-end and back-end development.
+        Proficient in Angular, HTML, CSS, JavaScript, Node.js, and AWS for
+        comprehensive and efficient web solutions.
       </p>
       <p>
-        My goal is to grow as a professional in web development and contribute
-        my knowledge to future projects.
+        Skilled in Express.js, Supabase, and JSON for building secure and agile
+        backend solutions in the cloud. Always eager to learn and grow.
       </p>
     </div>
   )
