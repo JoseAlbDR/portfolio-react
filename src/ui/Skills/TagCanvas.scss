@@ -1,0 +1,12 @@
+.tagcloud {
+  margin: 0 auto;
+  width: 300px !important;
+  height: 300px !important;
+}
+
+@media (min-width: 768px) {
+  .tagcloud {
+    width: 500px !important;
+    height: 500px !important;
+  }
+}
