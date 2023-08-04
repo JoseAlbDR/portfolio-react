@@ -1,0 +1,141 @@
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyles = createGlobalStyle`
+:root {
+  --primary-color: #1c7ed6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', 'sans-serif';
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 300;
+  color: #fff;
+  background: #022c43;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.flat-button {
+  // display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  padding: 10px 18px;
+  margin-top: 20px;
+  border: 1px solid;
+  float: left;
+  animation: fadeIn 1s 1.8s backwards;
+  white-space: nowrap;
+  transition: all 1s;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+
+  &:hover {
+    background-color: #fff;
+    color: #022c43;
+  }
+}
+
+.send-button {
+  color: #fff;
+  background-color: transparent;
+  padding: 10px 18px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  padding: 10px 18px;
+  margin-top: 10px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  grid-column: 2/3;
+  max-width: 100px;
+  margin-top: 10px;
+  transition: all 1s;
+  align-self: center;
+  margin-left: auto;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+
+  &:hover {
+    background-color: #fff;
+    color: #022c43;
+  }
+}
+
+.container {
+  width: 90%;
+  will-change: contents;
+  opacity: 0;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+}
+
+.text-zone {
+  max-height: 90%;
+  // margin-left: 8%;
+}
+
+h1 {
+  color: #fff;
+  font-size: 25px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 15px;
+
+  &::before {
+    content: '<h1>';
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 18px;
+    opacity: 0.6;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+
+  &::after {
+    content: '</h1>';
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 18px;
+    opacity: 0.6;
+    margin-left: -20px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 56px;
+  }
+}
+`
+
+export default GlobalStyles

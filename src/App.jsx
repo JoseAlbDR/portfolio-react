@@ -10,6 +10,7 @@ import { QueryClient } from '@tanstack/query-core'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Skills from './pages/Skills'
+import GlobalStyles from './styles/GlobalStyles'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -23,6 +24,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
+      <GlobalStyles />
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Navigate replace to="home" />} />
