@@ -127,7 +127,9 @@ h1 {
     margin-left: -20px;
   }
 }
-
+p{
+  font-size: 15px
+}
 @media (min-width: 768px) {
   body {
     overflow: hidden;
