@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 // import './Main.scss'
 
-const OverflowScroll = styled.div`
+const OverflowScroll = styled.main`
   @media (min-width: 768px) {
     overflow: scroll;
     overflow-x: hidden;
@@ -9,7 +9,7 @@ const OverflowScroll = styled.div`
   }
 `
 
-const Page = styled.main`
+const Page = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
