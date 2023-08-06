@@ -51,10 +51,12 @@ function ContactForm() {
         name="user_name"
         placeholder="Name"
         disabled={isSubmiting}
+        // error={errors?.user_name?.message}
         {...register('user_name', {
           required: 'This field is required',
         })}
       />
+      <span>{errors?.user_name?.message}</span>
       <input
         className={`contact-mail ${!animation ? 'form-animation' : ''}`}
         type="email"
@@ -62,8 +64,13 @@ function ContactForm() {
         name="user_email"
         placeholder="Email"
         disabled={isSubmiting}
+        // error={errors?.user_name?.message}
         {...register('user_email', {
           required: 'This field is required',
+          pattern: {
+            value: /\S+@\S+\.\S+/,
+            message: 'Provide a valid email address',
+          },
         })}
       />
       <input
@@ -73,6 +80,7 @@ function ContactForm() {
         name="subject"
         placeholder="Subject"
         disabled={isSubmiting}
+        // error={errors?.user_name?.message}
         {...register('subject', {
           required: 'This field is required',
         })}
@@ -85,6 +93,7 @@ function ContactForm() {
         cols="30"
         rows="10"
         disabled={isSubmiting}
+        // error={errors?.user_name?.message}
         {...register('message', {
           required: 'This field is required',
         })}
