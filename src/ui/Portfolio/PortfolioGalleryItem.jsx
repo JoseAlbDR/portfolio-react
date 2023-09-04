@@ -2,7 +2,7 @@ function PortfolioGalleryItem({ project, className }) {
   return (
     <div className={className}>
       <img
-        src={project.cover}
+        src={project.image}
         alt={project.title}
         className="portfolio-image"
       />
@@ -11,13 +11,13 @@ function PortfolioGalleryItem({ project, className }) {
         <h4 className="project-description">{project.description}</h4>
         <button
           className="project-button"
-          onClick={() => window.open(project.webUrl)}
+          onClick={() => window.open(project.live)}
         >
           Web
         </button>
         <button
           className="project-button"
-          onClick={() => window.open(project.repoUrl)}
+          onClick={() => window.open(project.github)}
         >
           Github
         </button>

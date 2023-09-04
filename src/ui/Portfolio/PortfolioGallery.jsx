@@ -6,13 +6,13 @@ function PortfolioGallery() {
   const { isLoading, data } = useProjects()
 
   if (isLoading) return
-  console.log(data)
 
+  const { projects } = data
   return (
     <div className="images-container">
       {
         <List
-          items={portfolioData.portfolio}
+          items={projects}
           render={(project, i) => (
             <PortfolioGalleryItem
               key={i}
