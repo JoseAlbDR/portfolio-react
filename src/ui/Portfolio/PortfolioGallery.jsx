@@ -6,7 +6,7 @@ function PortfolioGallery() {
   const { isLoading, data } = useProjects()
 
   if (isLoading) return
-
+  if (!data) return <p style={{ fontSize: '25px' }}>Error Fetching Projects</p>
   const { projects } = data
   return (
     <div className="images-container">
