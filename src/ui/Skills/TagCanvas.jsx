@@ -4,7 +4,7 @@ function TagCanvas() {
   return (
     <TagCloud
       options={{
-        radius: 150,
+        radius: 200,
         maxSpeed: 'fast',
       }}
       onClick={(tag, ev) => alert(tag)}
