@@ -10,7 +10,7 @@ import { QueryClient } from '@tanstack/query-core'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Skills from './pages/Skills'
-import NotFound from './pages/notFound'
+import NotFound from './pages/NotFound'
 
 const queryClient = new QueryClient({
   defaultOptions: {
