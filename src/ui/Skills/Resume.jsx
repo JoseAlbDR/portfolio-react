@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import CVJAlbertoDelgado from '../../download/CVJAlbertoDelgado.pdf'
+import CVJAlbertoDelgado from '../../assets/curriculum/CVJAlbertoDelgado.pdf'
 
 function Resume() {
   return (
