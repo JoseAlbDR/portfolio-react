@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import ResumeJAlbertoDelgado from '../../download/ResumeJAlbertoDelgado.pdf'
+import CVJAlbertoDelgado from '../../download/ResumeJAlbertoDelgado.pdf'
 
 function Resume() {
   return (
@@ -8,7 +8,7 @@ function Resume() {
         download="Resume-JAlbertoDelgado"
         target="_blanc"
         rel="noreferrer"
-        to={ResumeJAlbertoDelgado}
+        to={CVJAlbertoDelgado}
         className="flat-button"
       >
         Download CV
