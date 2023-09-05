@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
-import CVJAlbertoDelgado from '../../download/ResumeJAlbertoDelgado.pdf'
+import CVJAlbertoDelgado from '../../download/CVJAlbertoDelgado.pdf'
 
 function Resume() {
   return (
     <div>
       <Link
-        download="Resume-JAlbertoDelgado"
-        target="_blanc"
+        download="CVJAlbertoDelgado"
+        target="_blank"
         rel="noreferrer"
         to={CVJAlbertoDelgado}
         className="flat-button"
