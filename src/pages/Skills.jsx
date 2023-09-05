@@ -5,6 +5,7 @@ import AboutText from '../ui/About/AboutText'
 import './Skills.scss'
 import Container from '../ui/AppLayout/Container'
 import TagCanvas from '../ui/Skills/TagCanvas'
+import Resume from '../ui/Skills/Resume'
 
 function Skills() {
   const title = 'Skills'
@@ -16,6 +17,7 @@ function Skills() {
         <TextZone>
           <SectionTitle title={title} />
           <AboutText />
+          <Resume />
         </TextZone>
         <TagCanvas />
       </Container>

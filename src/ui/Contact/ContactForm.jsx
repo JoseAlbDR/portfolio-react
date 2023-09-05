@@ -23,7 +23,7 @@ function ContactForm() {
   function onSubmitForm(formData) {
     let token = captchaRef.current.getValue()
     if (token) {
-      submitForm({ formData, token }, { onSuccess: () => reset() })
+      submitForm({ formData, token })
       setAnimation(false)
     } else {
       toast.error('You must confirm you are not a robot')
