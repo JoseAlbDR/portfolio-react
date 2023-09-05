@@ -47,22 +47,22 @@ function ContactForm() {
       <input
         className={`contact-name ${!animation ? 'form-animation' : ''}`}
         type="text"
-        id="user_name"
-        name="user_name"
+        id="name"
+        name="name"
         placeholder="Name"
         disabled={isSubmiting}
-        {...register('user_name', {
+        {...register('name', {
           required: 'This field is required',
         })}
       />
       <input
         className={`contact-mail ${!animation ? 'form-animation' : ''}`}
         type="email"
-        id="user_email"
-        name="user_email"
+        id="email"
+        name="email"
         placeholder="Email"
         disabled={isSubmiting}
-        {...register('user_email', {
+        {...register('email', {
           required: 'This field is required',
         })}
       />
