@@ -7,13 +7,13 @@ function TagCanvas() {
         radius: 200,
         maxSpeed: 'fast',
       }}
-      onClick={(tag, ev) => alert(tag)}
       onClickOptions={{ passive: true }}
       // style={{ maxidth: '100%', height: '100%' }}
     >
       {[
+        'Angular',
         'VSCode',
-        // 'TypeScript',
+        'TypeScript',
         'React',
         'Redux',
         'RTK',
