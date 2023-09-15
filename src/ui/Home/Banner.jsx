@@ -7,7 +7,7 @@ import { useAnimation } from '../../hooks/useAnimation'
 function Banner() {
   const { letterClass } = useAnimation(4)
   const name = '.Alberto'
-  const jobLineOne = 'Full Stack'
+  const jobLineOne = 'Junior Full Stack'
   const jobLineTwo = 'Web Developer'
 
   return (
