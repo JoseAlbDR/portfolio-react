@@ -11,7 +11,7 @@ function Resume() {
         to={CVJAlbertoDelgado}
         className="flat-button"
       >
-        Download CV
+        Descargar CV
       </Link>
     </div>
   )
