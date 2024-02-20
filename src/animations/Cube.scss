@@ -50,7 +50,7 @@
 @keyframes spincube {
   from,
   to {
-    tranform: rotateX(0deg) rotatey(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotatey(0deg) rotateZ(0deg);
   }
   16% {
     transform: rotateY(-90deg) rotateZ(90deg);
