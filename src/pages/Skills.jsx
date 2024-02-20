@@ -6,9 +6,10 @@ import './Skills.scss'
 import Container from '../ui/AppLayout/Container'
 import TagCanvas from '../ui/Skills/TagCanvas'
 import Resume from '../ui/Skills/Resume'
+import SkillsText from '../ui/Skills/SkillsText'
 
 function Skills() {
-  const title = 'Skills'
+  const title = 'Habilidades'
 
   return (
     <>
@@ -16,7 +17,7 @@ function Skills() {
       <Container type="about">
         <TextZone>
           <SectionTitle title={title} />
-          <AboutText />
+          <SkillsText />
           <Resume />
         </TextZone>
         <TagCanvas />

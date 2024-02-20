@@ -8,13 +8,11 @@ import { toast } from 'react-hot-toast'
 import Loader from 'react-loaders'
 
 function ContactForm() {
-  const test = true
   const [animation, setAnimation] = useState(true)
   const { isSubmiting, submitForm } = useSubmitForm()
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm()
   const form = useRef()
@@ -26,7 +24,7 @@ function ContactForm() {
       submitForm({ formData, token })
       setAnimation(false)
     } else {
-      toast.error('You must confirm you are not a robot')
+      toast.error('Confirma que no eres un robot')
       // throw new Error('You must confirm you are not a robot')
     }
   }
@@ -49,7 +47,7 @@ function ContactForm() {
         type="text"
         id="name"
         name="name"
-        placeholder="Name"
+        placeholder="Nombre"
         disabled={isSubmiting}
         {...register('name', {
           required: 'This field is required',
@@ -71,7 +69,7 @@ function ContactForm() {
         type="text"
         id="subject"
         name="subject"
-        placeholder="Subject"
+        placeholder="Asunto"
         disabled={isSubmiting}
         {...register('subject', {
           required: 'This field is required',
@@ -81,7 +79,7 @@ function ContactForm() {
         className={`contact-message ${!animation ? 'form-animation' : ''}`}
         name="message"
         id="message"
-        placeholder="Message"
+        placeholder="Mensaje"
         cols="30"
         rows="10"
         disabled={isSubmiting}
@@ -95,7 +93,7 @@ function ContactForm() {
       />
 
       <LinkButton disabled={isSubmiting} className="send-button">
-        SEND
+        ENVIAR
       </LinkButton>
     </form>
   )

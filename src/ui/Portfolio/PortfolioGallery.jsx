@@ -1,6 +1,5 @@
 import List from '../AppLayout/List'
 import PortfolioGalleryItem from './PortfolioGalleryItem'
-import portfolioData from '../../data/portfolio.json'
 import { useProjects } from '../../hooks/useProjects'
 function PortfolioGallery() {
   const { isLoading, data } = useProjects()

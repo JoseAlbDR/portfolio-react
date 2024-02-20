@@ -50,13 +50,13 @@ nav {
 
   a.about-link {
     &:after {
-      content: 'ABOUT';
+      content: 'SOBRE MI';
     }
   }
 
   a.contact-link {
     &:after {
-      content: 'CONTACT';
+      content: 'CONTACTO';
     }
   }
 
@@ -68,7 +68,7 @@ nav {
 
   a.skills-link {
     &:after {
-      content: 'SKILLS';
+      content: 'HABILIDADES';
     }
   }
   a.active {

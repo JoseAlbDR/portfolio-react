@@ -24,7 +24,7 @@ function About() {
     { className: 'face6', icon: faAngular, color: '#DD0031' },
   ]
 
-  const title = 'About me'
+  const title = 'Sobre mí'
   return (
     <>
       <LoadingAnimation type="pacman" />

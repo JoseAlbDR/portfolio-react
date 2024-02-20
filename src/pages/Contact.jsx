@@ -8,7 +8,7 @@ import Container from '../ui/AppLayout/Container'
 import './Contact.scss'
 import TextZone from '../ui/AppLayout/TextZone'
 function Contact() {
-  const title = 'Contact me'
+  const title = 'Contacta'
   return (
     <>
       <LoadingAnimation type="pacman" />

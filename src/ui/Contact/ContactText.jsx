@@ -2,9 +2,9 @@ function ContactText() {
   return (
     <>
       <p>
-        If you are interested in my work or want more information on any topic,
-        feel free to contact me through the following form, and I will get back
-        to you as soon as possible.
+        Si estás interesado en mi trabajo o quieres mas informacion de cualquier
+        tipo sientete libre de contactar conmigo con el siguiente formulario, te
+        responderé lo antes posible.
       </p>
     </>
   )

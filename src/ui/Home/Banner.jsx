@@ -14,13 +14,21 @@ function Banner() {
     <>
       <h1>
         <span>
-          <AnimatedLetters letterClass={letterClass} strArray={'Hi'} idx={12} />
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={'Hola'}
+            idx={12}
+          />
         </span>
         <span>
-          <AnimatedLetters letterClass={letterClass} strArray={'I'} idx={13} />
-          <AnimatedLetters letterClass={letterClass} strArray={`'m`} idx={14} />
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={'soy'}
+            idx={13}
+          />
+
           <img src={LogoTitle} alt="developer" />
-          <AnimatedLetters letterClass={letterClass} strArray={name} idx={15} />
+          <AnimatedLetters letterClass={letterClass} strArray={name} idx={14} />
         </span>
         <AnimatedLetters
           letterClass={letterClass}
