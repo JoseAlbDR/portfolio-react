@@ -7,7 +7,7 @@ import {
   faJsSquare,
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
-import Cubespinner from '../animations/Cubespinner'
+import Cubespinner from '../animations/Photo'
 import AboutText from '../ui/About/AboutText'
 import LoadingAnimation from '../animations/LoadingAnimation'
 import SectionTitle from '../ui/AppLayout/SectionTitle'
