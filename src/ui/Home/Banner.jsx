@@ -43,7 +43,7 @@ function Banner() {
       </h1>
       <h2>Frontent Developer / Backend Developer</h2>
       <LinkButton to="/contact" className="flat-button">
-        CONTACT ME
+        CONTACTA
       </LinkButton>
     </>
   )
