@@ -6,9 +6,9 @@ function SkillsText() {
         habilidades incluye Angular, React y TypeScript, lo que me permite crear
         interfaces dinámicas y modernas. Utilizo herramientas como{' '}
         <span className="blue-bold">VSCode</span> para mejorar mi flujo de
-        trabajo y frameworks como{' '}
-        <span className="blue-bold">React Router</span> para la navegación en
-        aplicaciones de una sola página (SPA). Además, domino{' '}
+        trabajo y liberias como <span className="blue-bold">React</span> o
+        frameworks como <span className="blue-bold">Angular</span> para la
+        navegación en aplicaciones de una sola página (SPA). Además, domino{' '}
         <span className="blue-bold">HTML</span>,{' '}
         <span className="blue-bold">CSS</span> y{' '}
         <span className="blue-bold">JavaScript</span> para crear experiencias de
@@ -18,8 +18,8 @@ function SkillsText() {
         <span className="blue-bold">Desarrollo Backend:</span> Me especializo en
         Node.js, Express y Nest para construir APIs robustas y escalables.
         Manejo bases de datos como <span className="blue-bold">PostgreSQL</span>{' '}
-        y <span className="blue-bold">MongoDB</span>, junto con herramientas
-        como <span className="blue-bold">Prisma</span> y{' '}
+        y <span className="blue-bold">MongoDB</span>, junto con ORMs como{' '}
+        <span className="blue-bold">Prisma</span> y{' '}
         <span className="blue-bold">Mongoose</span>, para gestionar eficazmente
         los datos de mis aplicaciones. Además, tengo experiencia en el
         despliegue de aplicaciones en la nube, especialmente en{' '}
