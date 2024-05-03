@@ -9,7 +9,7 @@ function Resume() {
         target="_blank"
         rel="noreferrer"
         to={CVJAlbertoDelgado}
-        className="flat-button"
+        className="bold-button"
       >
         Descargar CV
       </Link>

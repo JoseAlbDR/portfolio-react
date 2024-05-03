@@ -53,6 +53,30 @@ body {
   }
 }
 
+.bold-button {
+  // display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  padding: 10px 18px;
+  margin-top: 20px;
+  border: 1px solid;
+  float: left;
+  animation: fadeIn 1s 1.8s backwards;
+  white-space: nowrap;
+  transition: all 1s;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  background-color: var(--primary-color);
+  &:hover {
+    background-color: #fff;
+    color: #022c43;
+  }
+}
+
 .send-button {
   color: #fff;
   background-color: transparent;
